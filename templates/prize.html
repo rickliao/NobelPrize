@@ -1,0 +1,24 @@
+<!doctype html>
+<title>Prize</title>
+<table id="prize" class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Year</th>
+            <th>Category</th>
+            <th>Number of Laureates</th>
+            <th>Motivation</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entry in entries %}
+            <tr>
+                <td>{{entry['id']}}</td>
+                <td>{{entry['year']}}</td>
+                <td>{{entry['category']}}</td>
+                <td>{{entry['numLaureate']}}</td>
+                <td>{{entry['motivation']}}</td>
+            </tr>
+         {% endfor %}
+    </tbody>
+</table>
