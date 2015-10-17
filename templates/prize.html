@@ -1,24 +1,37 @@
-<!doctype html>
-<title>Prize</title>
-<table id="prize" class="table">
-    <thead>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prize</title>
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <table id="prize" class="table">
+      <thead>
         <tr>
-            <th>ID</th>
-            <th>Year</th>
-            <th>Category</th>
-            <th>Number of Laureates</th>
-            <th>Motivation</th>
+          <th>ID</th>
+          <th>Year</th>
+          <th>Category</th>
+          <th>Number of Laureates</th>
+          <th>Laureate(s)</th>
+          <th>Motivation</th>
         </tr>
-    </thead>
-    <tbody>
-        {% for entry in entries %}
-            <tr>
-                <td>{{entry['id']}}</td>
-                <td>{{entry['year']}}</td>
-                <td>{{entry['category']}}</td>
-                <td>{{entry['numLaureate']}}</td>
-                <td>{{entry['motivation']}}</td>
-            </tr>
+      </thead>
+      <tbody>
+        {% for id in entries %}
+          <tr>
+            <td><a href={{entries[id]['url']}}> {{id}} </a></td>
+            <td>{{entries[id]['year']}}</td>
+            <td>{{entries[id]['category']}}</td>
+            <td>{{entries[id]['numLaureate']}}</td>
+            <td>{% for person in entries[id]['laureate'][:-1] %}
+                {{person}},
+              {% endfor%}
+              {{entries[id]['laureate'][-1]}}
+            </td>
+            <td>{{entries[id]['motivation']}}</td>
+          </tr>
          {% endfor %}
-    </tbody>
-</table>
+      </tbody>
+    </table>
+  </body>
+</html>
