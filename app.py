@@ -17,15 +17,15 @@ def render_prize():
 
 @app.route("/2008/economics")
 def render_2008_economics():
-	return render_template('prize_template.html', entry = prize_rows[1])
+	return render_template('economics_2008.html', entry = prize_rows[1])
 
 @app.route("/2015/physics")
 def render_2015_physics():
-	return render_template('prize_template.html', entry = prize_rows[2])
+	return render_template('physics_2015.html', entry = prize_rows[2])
 
 @app.route("/1964/chemistry")
 def render_1964_chemistry():
-	return render_template('prize_template.html', entry = prize_rows[3])
+	return render_template('chemistry_1964.html', entry = prize_rows[3])
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')

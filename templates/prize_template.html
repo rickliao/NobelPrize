@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{{entry['year']}} {{entry['category']}}</title>
-    <link href="/static/bootstrap.min.css" rel="stylesheet" media="screen">
-  </head>
-  <body>
-    <div class="jumbotron">
-      <div class="container">
-        <h1>{{entry['category']}}</h1>
-        <h2>Year: {{entry['year']}} <br>
-            Number of Laureate: {{entry['numLaureate']}} <br>
-            Laureate:
-            {% for v in entry['laureate'][:-1] %}
-              {{v}},
-            {% endfor %}
-            {{entry['laureate'][-1]}} 
-        </h2>
-        <p class="lead">Motivation: {{entry['motivation']}}</p>
-        <a class="btn btn-primary">small ASS Learn more button</a>
-      </div>
+{% extends "navbar.html" %}
+{% block title %}
+  {{entry['year']}} {{entry['category']}}
+{% endblock %}
+{% block body %}
+  <div class="jumbotron">
+    <div class="container">
+      <h1>{{entry['category']}}</h1>
+      <h2>Year: {{entry['year']}} <br>
+          Number of Laureate: {{entry['numLaureate']}} <br>
+          Laureate:
+          {% for v in entry['laureate'][:-1] %}
+            {{v}},
+          {% endfor %}
+          {{entry['laureate'][-1]}} 
+      </h2>
+      <p class="lead">Motivation: {{entry['motivation']}}</p>
+      {% block content %}
+      {% endblock %}
+      <br>
+      <a class="btn btn-primary">small ASS Learn more button</a>
     </div>
-  </body>
-</html>
+  </div>
+{% endblock %}
