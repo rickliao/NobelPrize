@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends "navbar.html" %}
+{% block title %}
+  Lacreate
+{% endblock %}
+{% block body %}
+  <div class="jumbotron">
+    <div class="container">
+      <h1>
+        Lacreate
+      </h1>
+      <table id="lacreate" class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>prizes</th>
+            <th>DOB</th>
+            <th>Gender</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for id in entries %}
+            <tr>
+              <td><a href={{entries[id]['url']}}> {{id}} </a></td>
+              <td>{{entries[id]['name']}}</td>
+              <td>{{entries[id]['prizes']}}</td>
+              <td>{{entries[id]['dob']}}</td>
+              <td>{{entries[id]['gender']}}</td>
+            </tr>
+           {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}

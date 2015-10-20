@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends "navbar.html" %}
+{% block title %}
+  Country
+{% endblock %}
+{% block body %}
+  <div class="jumbotron">
+    <div class="container">
+      <h1>
+        Country
+      </h1>
+      <table id="country" class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Number of Prizes</th>
+            <th>Number of Laureates</th>
+            <th>Population</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for id in entries %}
+            <tr>
+              <td><a href={{entries[id]['url']}}> {{id}} </a></td>
+              <td>{{entries[id]['Name']}}</td>
+              <td>{{entries[id]['numPrizes']}}</td>
+              <td>{{entries[id]['numLaureate']}}</td>
+              <td>{% for person in entries[id]['laureate'][:-1] %}
+                  {{person}},
+                {% endfor%}
+                {{entries[id]['laureate'][-1]}}
+              </td>
+            </tr>
+           {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}
