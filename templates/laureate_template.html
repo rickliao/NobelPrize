@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends "navbar.html" %}
+{% block title %}
+  {{entry['name']}} {{entry['year']}}
+{% endblock %}
+{% block body %}
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Name: {{entry['name']}}</h1>
+      <h2>Year: {{entry['year']}}</h2>
+      <p class="lead">Prizes: {{entry['prizes']}}
+      Date of Birth: {{entry['dob']}}
+      Gender: {{entry['gender']}}</p>
+      {% block content %}
+      {% endblock %}
+      <br>
+      <a class="btn btn-primary">small ASS Learn more button</a>
+    </div>
+  </div>
+{% endblock %}

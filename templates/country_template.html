@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "navbar.html" %}
+{% block title %}
+  {{entry['name']}}
+{% endblock %}
+{% block body %}
+  <div class="jumbotron">
+    <div class="container">
+      <h1>{Name: {entry['name']}}</h1>
+      <h2>Population: {{entry['pop']}} <br>
+          Number of Laureate: {{entry['numLaureate']}} <br>
+          Laureate:
+          {% for v in entry['laureate'][:-1] %}
+            {{v}},
+          {% endfor %}
+          {{entry['laureate'][-1]}} 
+      </h2>
+      <p class="lead">Number of Prizes: {{entry['numPrizes']}}</p>
+      {% block content %}
+      {% endblock %}
+      <br>
+      <a class="btn btn-primary">small ASS Learn more button</a>
+    </div>
+  </div>
+{% endblock %}

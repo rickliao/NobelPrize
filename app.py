@@ -11,6 +11,18 @@ prize_rows[1] = dict(url='/2008/economics', numLaureate=1, year=2008, category='
 prize_rows[2] = dict(url='/2015/physics', numLaureate=2, year=2015, category='Physics', motivation='\"for the discovery of neutrino oscillations, which shows that neutrinos have mass\"', laureate=['Takaaki Kajita', 'Arthur B. McDonald'])
 prize_rows[3] = dict(url='/1964/chemistry', numLaureate=1, year=1964, category='Chemistry', motivation='\"for her determinations by X-ray techniques of the structures of important biochemical substances\"', laureate=['Dorothy Crowfoot Hodgkin'])
 
+laurate_rows = dict()
+#dict key = id
+laurate_rows[1] = dict(url='', id=1, name='Wilhelm Conrad', year=1901, prizes=1, dob='1845-03-27', gender='M')
+laurate_rows[1] = dict(url='', id=2, name='Hendrik Antoon', year=1902, prizes=1, dob='1853-07-18', gender='M')
+laurate_rows[1] = dict(url='', id=3, name='Wilhelm Conrad', year=1902, prizes=1, dob='1865-05-25', gender='M')
+
+country_rows = dict()
+#dict key = id
+country_rows[1] = dict(url='', id=1, name='Afghanistan', numPrizes=0, numLaureates=0, pop=26023100)
+country_rows[1] = dict(url='', id=2, name='United States', numPrizes=356, numLaureates=356, pop=321645000)
+country_rows[1] = dict(url='', id=3, name='United Kingdom', numPrizes=116, numLaureates=116, pop=64800000)
+
 @app.route("/prize")
 def render_prize():
     return render_template('prize.html', entries = prize_rows)
@@ -27,5 +39,12 @@ def render_2015_physics():
 def render_1964_chemistry():
 	return render_template('chemistry_1964.html', entry = prize_rows[3])
 
+@app.route("countries")
+def render_countries():
+	return render_template('country_template.html' entry = country_rows[3])
+
+@app.route("laurate")
+def render_laurates():
+	return render_template('laureate_template')
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
