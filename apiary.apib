@@ -1,0 +1,181 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# nobelprize
+
+nobelprize is an api to get various information about nobel prizes, their laureates, and the countries they are from
+
+#group Prizes
+
+## Prize collection [/prize]
+
+### List All Prizes [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": 1
+                "year": "2015",
+                "category": "physics",
+                "nr_laureates": 2,
+                "laureates": [919,920],
+                "motivation: "\"for the discovery of neutrino oscillations, which shows that neutrinos have mass\""
+            }, ...
+        ]
+        
+## Prize by id [/prize/id/{id}]
+
+### Get Prizes By ID [GET]
+
++ Parameters
+    + id (required, number, `1`) ... Int `id` of the Nobel Prize associated with id
+    
++ Response 200 (application/json)
+
+        {
+            "id": 1
+            "year": "2015",
+            "category": "physics",
+            "nr_laureates": 2,
+            "laureates": [919,920],
+            "motivation: "\"for the discovery of neutrino oscillations, which shows that neutrinos have mass\""
+        }
+        
+## Prize by year [/prize/year/{year}]
+
+### List Prizes By Year [GET]
+
++ Parameters
+    + year (required, number, `2015`) ... Int `year` of the year interested
+    
++ Response 200 (application/json)
+
+        [
+            {
+                "id": 1
+                "year": "2015",
+                "category": "physics",
+                "nr_laureates": 2,
+                "laureates": [919,920],
+                "motivation: "\"for the discovery of neutrino oscillations, which shows that neutrinos have mass\""
+            }, ...
+        ]
+    
+## Prize by category [/prize/category/{category}]
+
+### List Prizes By Category [GET]
+
++ Parameters
+    + category (required, string, `literature`) ... String `category` of the category of the Nobel Prize interested
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": 2
+                "year": "2015",
+                "category": "literature",
+                "nr_laureates": 1,
+                "laureates": [924],
+                "motivation: "\"for her polyphonic writings, a monument to suffering and courage in our time\""
+            }, ...
+        ]
+
+#group Laureates
+
+## Laureate collection [/laureate]
+
+### List All Laureates [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": 920,
+                "name": "Arthur B. McDonald",
+                "nr_prizes": 1,
+                "date_of_birth":"08-29-1943",
+                "gender":"male",
+                "country_code":"CA",
+                "prize":[1]
+            }, ...
+        ]
+        
+## Laureate by id [/laureate/id/{id}]
+
+### Get Laureate By ID [GET]
+
++ Parameters
+    + id (required, number, `920`) ... Int `id` of the laureate associated with id
+   
++ Response 200 (application/json)
+
+        {
+            "id": 920,
+            "name": "Arthur B. McDonald",
+            "nr_prizes": 1,
+            "date_of_birth":"08-29-1943",
+            "gender":"male",
+            "country_code":"CA",
+            "prize":[1]
+        }
+        
+## Laureate by country [/laureate/country/{country_code}]
+        
+### List Laureates By Country [GET]
+
++ Parameters
+    + country_code (required, number, `CA`) ... String `country_code` of a country in interest
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": 920,
+                "name": "Arthur B. McDonald",
+                "nr_prizes": 1,
+                "date_of_birth":"08-29-1943",
+                "gender":"male",
+                "country_code":"CA",
+                "prize":[1]
+            }, ...
+        ]
+        
+#group Countries
+
+## Country collection [/country]
+
+### List All Countries [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "country_code": "CA",
+                "name": "Canada",
+                "nr_prizes": 24,
+                "nr_laureates":24,
+                "population":35749600,
+                "laureate":[920, ...]
+            }, ...
+        ]
+
+
+## Country by code [/country/{country_code}]
+        
+### Get Country By Country Code [GET]
+
++ Parameters
+    + country_code (required, number, `CA`) ... String `country_code` of a country in interest
+    
++ Response 200 (application/json)
+
+        {
+            "country_code": "CA",
+            "name": "Canada",
+            "nr_prizes": 24,
+            "nr_laureates":24,
+            "population":35749600,
+            "laureate":[920, ...]
+        }
