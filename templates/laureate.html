@@ -14,9 +14,11 @@
           <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>prizes</th>
+            <th>Number of Prizes</th>
+            <th>Prizes</th>
             <th>DOB</th>
             <th>Gender</th>
+            <th>Country</th>
           </tr>
         </thead>
         <tbody>
@@ -24,9 +26,16 @@
             <tr>
               <td><a href={{entries[id]['url']}}> {{id}} </a></td>
               <td>{{entries[id]['name']}}</td>
-              <td>{{entries[id]['prizes']}}</td>
+              <td>{{entries[id]['numPrizes']}}</td>
+              <td>
+                {% for prize in entries[id]['prizes'][:-1] %}
+                  <a href={{entries[id]['prizesUrl'][loop.index0]}}> {{prize}} </a>,
+                {% endfor%}
+                <a href={{entries[id]['prizesUrl'][-1]}}> {{entries[id]['prizes'][-1]}} </a>
+              </td>
               <td>{{entries[id]['dob']}}</td>
               <td>{{entries[id]['gender']}}</td>
+              <td><a href={{entries[id]['countryUrl']}}> {{entries[id]['country']}} </a></td>
             </tr>
            {% endfor %}
         </tbody>

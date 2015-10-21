@@ -6,11 +6,17 @@
 {% block body %}
   <div class="jumbotron">
     <div class="container">
-      <h1>Name: {{entry['name']}}</h1>
-      <h2>Year: {{entry['year']}}</h2>
-      <p class="lead">Prizes: {{entry['prizes']}}
-      Date of Birth: {{entry['dob']}}
-      Gender: {{entry['gender']}}</p>
+      <h1>Name: {{entry['name']}}</h1> 
+      <h2>Year: {{entry['year']}}</h2> 
+      <p class="lead">Number of Prizes: {{entry['numPrizes']}} <br>
+      Prizes: 
+      {% for prize in entry['prizes'][:-1] %}
+        <a href={{entry['prizesUrl'][loop.index0]}}> {{prize}} </a>,
+      {% endfor%}
+      <a href={{entry['prizesUrl'][-1]}}> {{entry['prizes'][-1]}} </a> <br>
+      Date of Birth: {{entry['dob']}} <br>
+      Gender: {{entry['gender']}} <br>
+      Country: <a href={{entry['countryUrl']}}> {{entry['country']}} </a> </p>
       {% block content %}
       {% endblock %}
       <br>
