@@ -19,10 +19,10 @@ laureate_rows[919] = dict(url='/laureates/takaaki_kajita', name='Takaaki Kajita'
 
 country_rows = dict()
 #dict key = id
-country_rows[1] = dict(url='/countries/afghanistan', code='AF', name='Afghanistan', numPrizes=0, numLaureates=0, pop=26023100)
-country_rows[2] = dict(url='/countries/unitedstates', code= 'US',  name='United States', numPrizes=356, numLaureates=356, pop=321645000)
-country_rows[3] = dict(url='/countries/unitedkingdom', code='UK', name='United Kingdom', numPrizes=116, numLaureates=116, pop=64800000)
-country_rows[4] = dict(url='/countries/japan', code='JP', name='Japan', numPrizes=24, numLaureates=24, pop=126865000)
+# country_rows[1] = dict(url='/countries/afghanistan', code='AF', name='Afghanistan', numPrizes=0, numLaureates=0, pop=26023100)
+country_rows[1] = dict(url='/countries/unitedstates', code= 'US',  name='United States', numPrizes=356, numLaureates=356, pop=321645000)
+country_rows[2] = dict(url='/countries/unitedkingdom', code='UK', name='United Kingdom', numPrizes=116, numLaureates=116, pop=64800000)
+country_rows[3] = dict(url='/countries/japan', code='JP', name='Japan', numPrizes=24, numLaureates=24, pop=126865000)
 
 @app.route("/prize")
 def render_prize():
@@ -46,19 +46,15 @@ def render_countries():
 
 @app.route("/countries/unitedkingdom")
 def render_unitedkingdom():
-	return render_template('unitedkingdom.html', entry = country_rows[3])
+	return render_template('unitedkingdom.html', entry = country_rows[2])
 
 @app.route("/countries/unitedstates")
 def render_unitedstates():
-	return render_template('unitedstates.html', entry = country_rows[2])
-
-@app.route("/countries/afghanistan")
-def render_afghanistan():
-	return render_template('afghanistan.html', entry = country_rows[1])
+	return render_template('unitedstates.html', entry = country_rows[1])
 
 @app.route("/countries/japan")
 def render_japan():
-	return render_template('japan.html', entry = country_rows[4])
+	return render_template('japan.html', entry = country_rows[3])
 
 @app.route("/laureates")
 def render_laurates():
@@ -72,9 +68,17 @@ def render_paul_krugman():
 def render_takaaki_kajita():
 	return render_template('takaaki_kajita.html', entry = laureate_rows[919])
 
+@app.route("/laureates/arthur_mcdonald")
+def render_arthur_mcdonald():
+	return "Haven't made the page, only three instances of laureates required";
+
 @app.route("/laureates/dorothy_crowfoot_hodgkin")
 def render_dorothy_crowfoot_hodgkin():
 	return render_template('dorothy_crowfoot_hodgkin.html', entry = laureate_rows[230])
+
+@app.route("/about")
+def render_about():
+	return render_template('about.html');
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
