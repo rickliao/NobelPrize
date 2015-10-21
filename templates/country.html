@@ -13,6 +13,7 @@
         <thead>
           <tr>
             <th>ID</th>
+            <th>Code</th>
             <th>Name</th>
             <th>Number of Prizes</th>
             <th>Number of Laureates</th>
@@ -23,6 +24,7 @@
           {% for id in entries %}
             <tr>
               <td><a href={{entries[id]['url']}}> {{id}} </a></td>
+              <td>{{entries[id]['code']}}</td>
               <td>{{entries[id]['name']}}</td>
               <td>{{entries[id]['numPrizes']}}</td>
               <td>{{entries[id]['numLaureates']}}</td>

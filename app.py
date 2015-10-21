@@ -19,9 +19,9 @@ laureate_rows[919] = dict(url='/laureates/takaaki_kajita', name='Takaaki Kajita'
 
 country_rows = dict()
 #dict key = id
-country_rows[1] = dict(url='/countries/afghanistan', name='Afghanistan', numPrizes=0, numLaureates=0, pop=26023100)
-country_rows[2] = dict(url='/countries/unitedstates', name='United States', numPrizes=356, numLaureates=356, pop=321645000)
-country_rows[3] = dict(url='/countries/unitedkingdom', name='United Kingdom', numPrizes=116, numLaureates=116, pop=64800000)
+country_rows[1] = dict(url='/countries/afghanistan', code='AF', name='Afghanistan', numPrizes=0, numLaureates=0, pop=26023100)
+country_rows[2] = dict(url='/countries/unitedstates', code= 'US',  name='United States', numPrizes=356, numLaureates=356, pop=321645000)
+country_rows[3] = dict(url='/countries/unitedkingdom', code='UK', name='United Kingdom', numPrizes=116, numLaureates=116, pop=64800000)
 
 @app.route("/prize")
 def render_prize():
