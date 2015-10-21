@@ -23,14 +23,10 @@
           {% for id in entries %}
             <tr>
               <td><a href={{entries[id]['url']}}> {{id}} </a></td>
-              <td>{{entries[id]['Name']}}</td>
+              <td>{{entries[id]['name']}}</td>
               <td>{{entries[id]['numPrizes']}}</td>
-              <td>{{entries[id]['numLaureate']}}</td>
-              <td>{% for person in entries[id]['laureate'][:-1] %}
-                  {{person}},
-                {% endfor%}
-                {{entries[id]['laureate'][-1]}}
-              </td>
+              <td>{{entries[id]['numLaureates']}}</td>
+              <td>{{entries[id]['pop']}}</td>
             </tr>
            {% endfor %}
         </tbody>

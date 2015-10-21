@@ -6,14 +6,9 @@
 {% block body %}
   <div class="jumbotron">
     <div class="container">
-      <h1>{Name: {entry['name']}}</h1>
+      <h1>Name: {{entry['name']}}</h1>
       <h2>Population: {{entry['pop']}} <br>
-          Number of Laureate: {{entry['numLaureate']}} <br>
-          Laureate:
-          {% for v in entry['laureate'][:-1] %}
-            {{v}},
-          {% endfor %}
-          {{entry['laureate'][-1]}} 
+          Number of Laureate: {{entry['numLaureates']}} <br>
       </h2>
       <p class="lead">Number of Prizes: {{entry['numPrizes']}}</p>
       {% block content %}
