@@ -14,14 +14,14 @@ prize_rows[3] = dict(url='/1964/chemistry', numLaureate=1, year=1964, category='
 laurate_rows = dict()
 #dict key = id
 laurate_rows[1] = dict(url='wilhelm/röntgen', id=1, name='Wilhelm Röntgen', year=1901, prizes=1, dob='1845-03-27', gender='M')
-laurate_rows[1] = dict(url='hendrik/lorentz', id=2, name='Hendrik Lorentz', year=1902, prizes=1, dob='1853-07-18', gender='M')
-laurate_rows[1] = dict(url='pieter/zeeman', id=3, name='Pieter Zeeman', year=1902, prizes=1, dob='1865-05-25', gender='M')
+laurate_rows[2] = dict(url='hendrik/lorentz', id=2, name='Hendrik Lorentz', year=1902, prizes=1, dob='1853-07-18', gender='M')
+laurate_rows[3] = dict(url='pieter/zeeman', id=3, name='Pieter Zeeman', year=1902, prizes=1, dob='1865-05-25', gender='M')
 
 country_rows = dict()
 #dict key = id
 country_rows[1] = dict(url='countries/Afghanistan', id=1, name='Afghanistan', numPrizes=0, numLaureates=0, pop=26023100)
-country_rows[1] = dict(url='countries/unitedstates', id=2, name='United States', numPrizes=356, numLaureates=356, pop=321645000)
-country_rows[1] = dict(url='countries/unitedkingdom', id=3, name='United Kingdom', numPrizes=116, numLaureates=116, pop=64800000)
+country_rows[2] = dict(url='countries/unitedstates', id=2, name='United States', numPrizes=356, numLaureates=356, pop=321645000)
+country_rows[3] = dict(url='countries/unitedkingdom', id=3, name='United Kingdom', numPrizes=116, numLaureates=116, pop=64800000)
 
 @app.route("/prize")
 def render_prize():
