@@ -41,7 +41,7 @@ class Laureate(db.Model) :
     def __repr__(self) :
         return '<Laureate %r>' % self.name
 
-class Country(db.model) :
+class Country(db.Model) :
     country_code = db.Column(db.String(2), primary_key=True)
     name = name = db.Column(db.String(80))
     nr_laureates = db.Column(db.Integer)
