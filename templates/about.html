@@ -11,13 +11,13 @@
       Ellen Wiberg, Christopher Bentson, Chrystian Bueno, Rick Liao
       <h3>Ellen Wiberg</h3>
       <ul>
-				<li>photo</li>
-				<li>bio</li>
-				<li>major responsibilities</li>
-				<li>no. of commits</li>
-				<li>no. of issues</li>
-				<li>no. of unit tests</li>
-			</ul>
+	<li>photo</li>
+	<li>bio</li>
+	<li>major responsibilities</li>
+	<li>no. of commits</li>
+	<li>no. of issues</li>
+	<li>no. of unit tests</li>
+      </ul>
       <h3>Christopher Bentson</h3>
       <ul>
 				<li>photo</li>
@@ -39,23 +39,28 @@
       <h3>Rick Liao</h3>
       <img src='/static/rick.jpg' height='200', width='200'>
       <ul>
-				<li>bio</li>
-				<li>Set up server and basic website navigation</li>
-				<li>no. of commits</li>
-				<li>no. of issues</li>
-				<li>no. of unit tests</li>
-			</ul>
+        <li>Bio: I am a fourth year computer science student. My research is about linked data and semantics web.</li>
+        <li>Major Reponsibilities: Set up and maintain server and basic website navigation.</li>      
+        <li>No. of commits: </li>
+	<li>No. of issues: 5</li>
+	<li>No. of unit tests: 0</li>
+      </ul>
+
       <h2>Stats</h2>
       <ul>
-				<li>total no. of commits</li>
-				<li>total no. of issues</li>
-				<li>total no. of unit tests</li>
-				<li><b>Apiary API</b></li>
-				<li>a link to the <b>GitHub Issue Tracker</b></li>
-				<li>a link to the <b>GitHub Repo</b></li>
-				<li>a link to the <b>GitHub Wiki</b></li>
-			</ul>
-			<h2>Data</h2>
+	<li>Total no. of commits</li>
+	<li>Total no. of issues: 11</li>
+        <li>Total no. of unit tests: 9</li>
+        <li><b><a href='https://jsapi.apiary.io/previews/nobelprize/reference'>Apiary API</a></b></li>
+	<li><b><a href='https://github.com/rickliao/NobelPrize/issues'>GitHub Issue Tracker</a></b></li>
+	<li><b><a href='https://github.com/rickliao/NobelPrize'>GitHub Repo</a></b></li>
+	<li><b><a href='https://github.com/rickliao/NobelPrize/wiki'>GitHub Wiki</a></b></li>
+      </ul>
+      <h2>Data</h2>
+      <h3><a href='https://nobelprize.readme.io/v1.0'>Nobel Prize API</a></h3>
+        We used requests from python to get information from the API. For example, a get call to <code>http://api.nobelprize.org/v1/prize.json?year=2008&category=economics</code> will return the information in json for nobel prize in economics in 2008. For each prize, the API also return the laureate's id, which is used to get laureate information from the same API. A get call like <code>http://api.nobelprize.org/v1/laureate.json?id=919</code> returns the information associated with the laureate whose id is 919. 
+      <h3><a href='https://restcountries.eu/'>Countries API</a></h3>
+        We used this API to get information on coutnries. Each laureate returned from Nobel Prize API contains a country code, and we use this country code to scrap data of the country. For example, a get call to <code>https://restcountries.eu/rest/v1/alpha/us</code> will return the information in json on country with country code <code>us</code>, which is United States.
     </div>
   </div>
 {% endblock %}

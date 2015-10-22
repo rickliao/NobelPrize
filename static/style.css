@@ -1,0 +1,25 @@
+#mainBlock
+{
+  background-color: #000000;
+}
+
+#nobelPrizePic
+{
+  width: 100%;
+}
+
+#navbar-style
+{
+  background-color: #000000;
+  border-bottom: 2px solid #ffffff;
+}
+
+.pullDown-left
+{
+  border-left: 2px dashed #ffffff;
+}
+
+.pullDown-right
+{
+  border-right: 2px dashed #ffffff;
+}

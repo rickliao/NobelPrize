@@ -3,13 +3,17 @@
 {% block title %}
   Prize
 {% endblock %}
+{% block head %}
+  {{super()}}
+  <script type="text/javascript" charset="utf8" src="/static/start_datatable.js"></script>
+{% endblock %}
 {% block body %}
   <div class="jumbotron">
     <div class="container">
       <h1>
         Prize
       </h1>
-      <table id="prize" class="table">
+      <table id="prize" class="display">
         <thead>
           <tr>
             <th>ID</th>
