@@ -7,19 +7,19 @@
   <div class="jumbotron">
     <div class="container">
       <h1>{{entry['category']}}</h1>
-      <h2>Year: {{entry['year']}} <br>
-          Number of Laureate: {{entry['numLaureate']}} <br>
-          Laureate:
-          {% for v in entry['laureate'][:-1] %}
-            <a href={{entry['laureateUrl'][loop.index0]}}> {{v}} </a>,
-          {% endfor %}
-          <a href={{entry['laureateUrl'][-1]}}> {{entry['laureate'][-1]}} </a> 
-      </h2>
-      <p class="lead">Motivation: {{entry['motivation']}}</p>
+      <div class="well well-sm">
+        <h2>Year: {{entry['year']}} <br>
+            Number of Laureate: {{entry['numLaureate']}} <br>
+            Laureate:
+            {% for v in entry['laureate'][:-1] %}
+              <a href={{entry['laureateUrl'][loop.index0]}}> {{v}} </a>,
+            {% endfor %}
+            <a href={{entry['laureateUrl'][-1]}}> {{entry['laureate'][-1]}} </a> 
+        </h2>
+        <p class="lead">Motivation: {{entry['motivation']}}</p>
+      </div>
       {% block content %}
       {% endblock %}
-      <br>
-      <a class="btn btn-primary">small ASS Learn more button</a>
     </div>
   </div>
 {% endblock %}
