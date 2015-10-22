@@ -29,7 +29,7 @@ class Laureate(db.Model) :
     name = db.Column(db.String(80))
     nr_prizes = db.Column(db.Integer)
     date_of_birth = db.Column(db.DateTime)
-    gender = db.Column(db.String(80))
+    gender = db.Column(db.String(1))
     country_id = db.Column(db.Integer, db.ForeignKey('country.country_code'))
 
     def __init__(self, name, nr_prizes, date_of_birth, gender) :

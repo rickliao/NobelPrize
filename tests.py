@@ -55,8 +55,8 @@ class TestLaureates(TestCase):
 
     def setUp(self):
         db.create_all()
-        laureate1 = Laureate("John Doe", 1, datetime.date(1956, 11, 2), "male")
-        laureate2 = Laureate("Jane Doe", 2, datetime.date(1939, 4, 7), "female")
+        laureate1 = Laureate("John Doe", 1, datetime.date(1956, 11, 2), "M")
+        laureate2 = Laureate("Jane Doe", 2, datetime.date(1939, 4, 7), "F")
         db.session.add(laureate1)
         db.session.add(laureate2)
         db.session.commit()
@@ -71,18 +71,18 @@ class TestLaureates(TestCase):
 
     def test_filtering_laureates(self):   
         laureate = Laureate.query.filter_by(name == 'John Doe').first()
-        assert laureate.nr_prizes == 1 && laureate.gender == "male"
+        assert laureate.nr_prizes == 1 && laureate.gender == "M"
 
         laureate = Laureate.query.filter_by(nr_prizes > 1).first()
-        assert laureate.name == 'Jane Doe' && laureate.gender == "female"  
+        assert laureate.name == 'Jane Doe' && laureate.gender == "F"  
 
     def test_add_delete_laureate(self):
-        laureate3 = Laureate("Anne Smith", 1, datetime.date(1890), "female")
+        laureate3 = Laureate("Anne Smith", 1, datetime.date(1890), "F")
         db.session.add(laureate3)
         db.session.commit()
         assert len(Laureate.query.all()) == 3
 
-        Laureate.query.filter_by(gender == 'female').delete()
+        Laureate.query.filter_by(gender == 'F').delete()
         db.session.commit()
         assert len(Laureate.query.all()) == 1 
 
