@@ -3,9 +3,11 @@
   background-color: #000000;
 }
 
-#nobelPrizePic
+#main-picture
 {
   width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 #navbar-style
@@ -16,10 +18,27 @@
 
 .pullDown-left
 {
-  border-left: 2px dashed #ffffff;
+  border-left: 1px dashed #ffffff;
 }
 
 .pullDown-right
 {
-  border-right: 2px dashed #ffffff;
+  border-right: 1px dashed #ffffff;
+}
+
+.bodyContainer
+{
+  background-color: #000000;
+}
+
+.selector
+{
+  text-align: center;
+}
+
+.section
+{
+  display: inline-block;
+  width: 33%;
+  text-align: center;
 }

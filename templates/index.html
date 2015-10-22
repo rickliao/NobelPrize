@@ -3,13 +3,37 @@
 {% block title %}
   Intro
 {% endblock %}
-{% block body %}
-  <div style="width:100%;height:100%;background-color:#000000">
-    <br><br><br><br><br><br><br><br>
-    <div class="container" id="mainBlock">
-    <img src="static/nobel-prize-award-overview.jpg" class="img-responsive" id="nobelPrizePic"/>
-    <br><br><br><br><br><br><br><br>
-    <img src="static/nobel-prize.png" class="img-circle img-responsive" alt="Cinque Terre" width="212" height="203">
+{% block body %} 
+{{super()}}
+<body style="background-color:#000000;color:#ffffff;">
+  <div class="container">
+    <div class="jumbotron" style="background-color:#000000;text-align:center">
+      <h1>Nobel Prize</h1>
+      <img src="static/nobel-prize-award-overview.jpg" class="img-responsive"/>
+      <div class="container">
+        <p>"Please stop teaching my children that everyone gets a trophy just for participating. What is this, the Nobel Prize? Not everybody gets a trophy." - Glenn Beck</p>
+      </div>
+    </div>
+    <div class="row" style="text-align:center">
+      <div class="col-xs-12 col-s-12 col-md-4" style="text-align:center">
+        <h2>Prize</h2>
+        <a href="/prize">
+          <img src="static/nobel-prize.png" class="img-circle" width="212" height="204">
+        </a>
+      </div>
+      <div class="col-xs-12 col-s-12 col-md-4">
+        <h2>Laureate</h2>
+        <a href="/laureates">
+          <img src="static/Einstein.jpg" class="img-circle" width="212" height="204" style="border:1px solid grey;">
+        </a>
+      </div>
+      <div class="col-xs-12 col-s-12 col-md-4">
+        <h2>Country</h2>
+	<a href="/countries">
+          <img src="static/countries-1.png" class="img-circle" width="212" height="204">
+        </a>
+      </div>
     </div>
   </div>
+</body>
 {% endblock %}

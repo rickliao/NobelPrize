@@ -11,8 +11,10 @@
     <script src="/static/jquery-1.11.3.min.js"></script>
     <script src="/static/bootstrap.min.js"></script>
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="/static/start_datatable.js"></script>
     {% endblock %}
-  </head>
+  </head> 
+  {% block body %}
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top" id="navbar-style">
       <div class="container navbar-style">
@@ -34,10 +36,7 @@
           </ul>
         </div><!--/.nav-collapse -->
       </div>
-    </div>
-
-    {% block body %}
-    {% endblock %}
-
+    </div>  
   </body>
+  {% endblock %}
 </html>
