@@ -1,0 +1,275 @@
+commit 0e223435e282bced8e661a1b36ffcca6cc9fcbbb
+Author: Ellen Wiberg <ellen.wiberg@utexas.edu>
+Date:   Thu Oct 22 19:43:36 2015 -0500
+
+    Added bio information
+
+commit 037f991e5b05a72a489360639967cc2b7835ea9c
+Merge: 2563da0 47092a4
+Author: User <rickliao>
+Date:   Fri Oct 23 00:40:00 2015 +0000
+
+    Merge branch 'master' of https://github.com/rickliao/NobelPrize
+
+commit 2563da0f8b3e57149d6e48d3c599b1744128611a
+Author: User <rickliao>
+Date:   Fri Oct 23 00:39:41 2015 +0000
+
+    fixed minor details
+
+commit 47092a4a39be4ca8d89d4ee7939ae3ad00641103
+Merge: ea8c639 e588afc
+Author: Ellen Wiberg <ellen.wiberg@utexas.edu>
+Date:   Thu Oct 22 19:37:16 2015 -0500
+
+    Merge branch 'master' of github.com:rickliao/NobelPrize
+
+commit ea8c639c6c56f6d552539efe00e58e34fb53655c
+Author: Ellen Wiberg <ellen.wiberg@utexas.edu>
+Date:   Thu Oct 22 19:36:53 2015 -0500
+
+    Added comments to models
+
+commit e588afc4f74e9901d540a5910c2a036231e077a5
+Author: User <rickliao>
+Date:   Fri Oct 23 00:29:34 2015 +0000
+
+    more layout adjustments
+
+commit 50cb4a8229f0c575d865220c8ce41894e7d83264
+Author: User <rickliao>
+Date:   Fri Oct 23 00:11:07 2015 +0000
+
+    changed about layout
+
+commit 89990b2d2590419b39badd2051b8819674004802
+Author: Chris <crb828@ymail.com>
+Date:   Thu Oct 22 18:41:32 2015 -0500
+
+    added picture
+
+commit e2075ea89e177a80acb3abd97ba9efa4457e7b9e
+Merge: b4b86c4 e7fd517
+Author: Ellen Wiberg <ellen.wiberg@utexas.edu>
+Date:   Thu Oct 22 18:28:42 2015 -0500
+
+    Merge branch 'master' of github.com:rickliao/NobelPrize
+
+commit b4b86c44fa1b790200c836148d319f4896b5f0ba
+Author: Ellen Wiberg <ellen.wiberg@utexas.edu>
+Date:   Thu Oct 22 18:28:13 2015 -0500
+
+    Change gender attribute
+
+commit e7fd5171953017ec19f83f8c159087efea124ae1
+Author: User <rickliao>
+Date:   Thu Oct 22 23:10:06 2015 +0000
+
+    Updated about page and picture
+
+commit 286abf9aeaa16230f46a5aa0b85a0c94c302deb2
+Author: Ellen Wiberg <ellen.wiberg@utexas.edu>
+Date:   Thu Oct 22 16:58:34 2015 -0500
+
+    Added to about page
+
+commit 87f78143229c74cfff88c610051fc2b0ec0c8590
+Author: Chris <crb828@ymail.com>
+Date:   Thu Oct 22 16:34:07 2015 -0500
+
+    fixed number of commits
+
+commit 10177982ea983a95891e18a03831ecf88e041e9d
+Merge: 0567701 b494d5a
+Author: Chris <crb828@ymail.com>
+Date:   Thu Oct 22 16:32:56 2015 -0500
+
+    Merge https://github.com/rickliao/NobelPrize
+
+commit 05677013c61f831a26d99412fe5901978a3b37c9
+Author: Chris <crb828@ymail.com>
+Date:   Thu Oct 22 16:32:08 2015 -0500
+
+    updated about page
+
+commit b494d5a468d5f0a19c7e423cf512dc6ad712a5af
+Author: User <rickliao>
+Date:   Thu Oct 22 21:18:42 2015 +0000
+
+    Fixed creation of models
+
+commit 71d94b4fdc4da996865cd50043dc898c5b995da8
+Author: User <rickliao>
+Date:   Thu Oct 22 21:05:18 2015 +0000
+
+    navbar now works for every page and home page looks better. Fixes #17 and Fixes #12
+
+commit a841fee7ad7cc9e0746068f07e60f622dcfcf297
+Author: Ellen Wiberg <ellen.wiberg@utexas.edu>
+Date:   Thu Oct 22 13:34:05 2015 -0500
+
+    Created unit tests. Resolves #10
+
+commit fa79b6e6d393f184b0a617d658fbe53e44342b2a
+Author: Ellen Wiberg <ellen.wiberg@utexas.edu>
+Date:   Thu Oct 22 13:30:22 2015 -0500
+
+    Updated models. Resolves #2
+
+commit 8ddeb2fb4b938179a4b566ec6ba68c87839572f2
+Author: Rick <rick@rick-Inspiron-N5010>
+Date:   Thu Oct 22 09:42:58 2015 -0500
+
+    added country code
+
+commit 8db7836c6cd2aefc2d31639b0bbd5d8965b99c34
+Author: Rick <rick@rick-Inspiron-N5010>
+Date:   Thu Oct 22 09:39:10 2015 -0500
+
+    about page update
+
+commit 8ecc626e95ad20ae652cff2769d249d553645362
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Thu Oct 22 01:15:06 2015 -0500
+
+    make everything look pretty
+
+commit b43bb9fddd6f1cf75d95f56ccee40f2f3d0fe15e
+Author: User <rickliao>
+Date:   Thu Oct 22 03:07:01 2015 +0000
+
+    upgrade navbar and sort tables
+
+commit 4b85cc9e9c0a281424520a7e58463879670feaa0
+Author: Rick <rick@rick-Inspiron-N5010>
+Date:   Wed Oct 21 16:22:09 2015 -0500
+
+    about page
+
+commit 0c21173d3d832671e41869e13c6d3bdccf08a53d
+Author: Rick <rick@rick-Inspiron-N5010>
+Date:   Wed Oct 21 15:56:33 2015 -0500
+
+    made links from prize to laureate.. etc.
+
+commit df0a933e1b2ee3f2ff91f2a5e11703ba49c3eb74
+Author: Rick <rick@rick-Inspiron-N5010>
+Date:   Wed Oct 21 00:26:59 2015 -0500
+
+    typos
+
+commit 391b6ab44d5e61165b5131c618a2b4386737a650
+Author: Rick <rick@rick-Inspiron-N5010>
+Date:   Tue Oct 20 20:32:19 2015 -0500
+
+    linked up countries and laureates
+
+commit d8596ebba50eb0b9035f6f075e21beb88f940517
+Author: Chris <crb828@ymail.com>
+Date:   Tue Oct 20 19:19:16 2015 -0500
+
+    changed the laurates for linking in the future
+
+commit c9273e80b53096e538b45e9094414b1590480f88
+Author: Chris <crb828@ymail.com>
+Date:   Tue Oct 20 19:05:53 2015 -0500
+
+    fixed an error
+
+commit e021cc981428c137e27c5fbeb6732bfe36e6cce6
+Author: Chris <crb828@ymail.com>
+Date:   Tue Oct 20 19:03:57 2015 -0500
+
+    added last pages
+
+commit dacf98d334245b3f0442f121cb60e7b33529ad96
+Author: Chris <crb828@ymail.com>
+Date:   Tue Oct 20 18:42:17 2015 -0500
+
+    added more pages
+
+commit 74c9ffd98a41bb77bc6f13e4d364b05faf762498
+Author: Chris <crb828@ymail.com>
+Date:   Tue Oct 20 17:57:20 2015 -0500
+
+    added the base html files
+
+commit 533284e0af1f70c117d1462b02999164ea0cfa1f
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Tue Oct 20 17:24:12 2015 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 86757ade3f1eabba938ccf1bfa9496153c2b588c
+Author: il3345 <rickliao@utexas.edu>
+Date:   Tue Oct 20 14:17:23 2015 -0500
+
+    ignore and make file
+
+commit d45f718c8a2f829762644f52ce0cfdd6cdbf3adc
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Sat Oct 17 16:36:32 2015 -0500
+
+    fix navbar for mobile
+
+commit 470ab78818d4621857d1fc678ecc0e082c15eae7
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Sat Oct 17 16:25:33 2015 -0500
+
+    added title for prize
+
+commit eda53a0b32f1c200f5b8d8eaf4a2267032f2efac
+Merge: bd33c39 ee94d3d
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Sat Oct 17 16:19:00 2015 -0500
+
+    Merge branch 'master' of https://github.com/rickliao/NobelPrize
+
+commit bd33c396c1314a96864b512cffd80a10361dd8ca
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Sat Oct 17 16:18:45 2015 -0500
+
+    with navbars and videos
+
+commit ee94d3db633750c58541afaadcb086128ef0124b
+Merge: 566db2e 196a6b9
+Author: Ellen Wiberg <ellen.wiberg@utexas.edu>
+Date:   Sat Oct 17 16:14:36 2015 -0500
+
+    Merging
+
+commit 566db2e0cbbb7f12dcf96681c7f7f53e06bd5310
+Author: Ellen Wiberg <ellen.wiberg@utexas.edu>
+Date:   Sat Oct 17 16:13:43 2015 -0500
+
+    Started creating models
+
+commit 196a6b9041851be4335cf14dde287bcfa03bba9f
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Sat Oct 17 14:12:44 2015 -0500
+
+    added comment
+
+commit 8466edf0bf8d3bcb3fea6e267df8b3c7a900213b
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Sat Oct 17 14:10:10 2015 -0500
+
+    rename
+
+commit f3400c6c1cf2456b0949fd08ff8d57dd51707f4a
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Sat Oct 17 14:09:52 2015 -0500
+
+    prize pages first draft
+
+commit 4c13f70154f61612dfbd292c726164a571940e02
+Author: Ellen Wiberg <ellen.wiberg@utexas.edu>
+Date:   Fri Oct 16 14:58:23 2015 -0500
+
+    Added UML diagram. Resolves #4
+
+commit 1e32f5f5ed2cc6d5ac8638b7242455cdfb602a2d
+Author: User <rickliao>
+Date:   Fri Oct 16 19:47:24 2015 +0000
+
+    intial commit for prize model
