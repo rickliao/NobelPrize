@@ -1,13 +1,7 @@
-#mainBlock
+#main-container
 {
   background-color: #000000;
-}
-
-#main-picture
-{
-  width: 100%;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  color:#ffffff;
 }
 
 #navbar-style
@@ -26,19 +20,7 @@
   border-right: 1px dashed #ffffff;
 }
 
-.bodyContainer
+.center-content
 {
-  background-color: #000000;
-}
-
-.selector
-{
-  text-align: center;
-}
-
-.section
-{
-  display: inline-block;
-  width: 33%;
   text-align: center;
 }
