@@ -31,10 +31,10 @@ class TestPrizes(TestCase):
 
     def test_filtering_prizes(self):   
         prize = Prize.query.filter_by(category == 'Physics').first()
-        assert prize.year == 1991 && prize.motivation == "motivation1"
+        assert prize.year == 1991 and prize.motivation == "motivation1"
 
         prize = Prize.query.filter_by(year < 1991).first()
-        assert prize.category == 'Peace' && prize.motivation == "motivation2"  
+        assert prize.category == 'Peace' and prize.motivation == "motivation2"  
 
     def test_add_delete_prizes(self):
         prize3 = Prize("Physics", 2015, 4, "motivation3")
@@ -71,10 +71,10 @@ class TestLaureates(TestCase):
 
     def test_filtering_laureates(self):   
         laureate = Laureate.query.filter_by(name == 'John Doe').first()
-        assert laureate.nr_prizes == 1 && laureate.gender == "M"
+        assert laureate.nr_prizes == 1 and laureate.gender == "M"
 
         laureate = Laureate.query.filter_by(nr_prizes > 1).first()
-        assert laureate.name == 'Jane Doe' && laureate.gender == "F"  
+        assert laureate.name == 'Jane Doe' and laureate.gender == "F"  
 
     def test_add_delete_laureate(self):
         laureate3 = Laureate("Anne Smith", 1, datetime.date(1890), "F")
@@ -111,10 +111,10 @@ class TestCountries(TestCase):
 
     def test_filtering_countries(self):   
         country = Country.query.filter_by(country_code == 'SE').first()
-        assert country.name == 'Sweden' && country.nr_laureates == 10
+        assert country.name == 'Sweden' and country.nr_laureates == 10
 
-        country = Country.query.filter_by(population >  == 10000000).first()
-        assert country.name == 'United States' && country.nr_laureates == 18
+        country = Country.query.filter_by(population > 10000000).first()
+        assert country.name == 'United States' and country.nr_laureates == 18
 
     def test_add_delete_country(self):
         country3 = Country("UK", "United Kingdom", 11, 7, 50000000)

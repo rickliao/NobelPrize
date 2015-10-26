@@ -1,6 +1,8 @@
 from flask import Flask, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
+
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://username:password@localhost/db_name'
 db = SQLAlchemy(app)
 
 @app.route("/")
