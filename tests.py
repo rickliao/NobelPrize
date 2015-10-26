@@ -3,9 +3,9 @@ from flask.ext.testing import TestCase
 import datetime
 
 from app import db, app
+from models import Prize, Laureate, Country
 
-
-TEST_DATABASE_URI = "sqlite://test.sqlite"
+TEST_DATABASE_URI = "sqlite://"
 
 class TestPrizes(TestCase):
 
@@ -30,10 +30,10 @@ class TestPrizes(TestCase):
         assert len(prizes) == 2
 
     def test_filtering_prizes(self):   
-        prize = Prize.query.filter_by(category == 'Physics').first()
+        prize = Prize.query.filter_by(category = 'Physics').first()
         assert prize.year == 1991 and prize.motivation == "motivation1"
 
-        prize = Prize.query.filter_by(year < 1991).first()
+        prize = Prize.query.filter(Prize.year < 1991).first()
         assert prize.category == 'Peace' and prize.motivation == "motivation2"  
 
     def test_add_delete_prizes(self):
@@ -42,7 +42,7 @@ class TestPrizes(TestCase):
         db.session.commit()
         assert len(Prize.query.all()) == 3
 
-        Prize.query.filter_by(category == 'Physics').delete()
+        Prize.query.filter_by(category = 'Physics').delete()
         db.session.commit()
         assert len(Prize.query.all()) == 1 
 
@@ -70,19 +70,19 @@ class TestLaureates(TestCase):
         assert len(laureates) == 2
 
     def test_filtering_laureates(self):   
-        laureate = Laureate.query.filter_by(name == 'John Doe').first()
+        laureate = Laureate.query.filter_by(name = 'John Doe').first()
         assert laureate.nr_prizes == 1 and laureate.gender == "M"
 
-        laureate = Laureate.query.filter_by(nr_prizes > 1).first()
+        laureate = Laureate.query.filter(Laureate.nr_prizes > 1).first()
         assert laureate.name == 'Jane Doe' and laureate.gender == "F"  
 
     def test_add_delete_laureate(self):
-        laureate3 = Laureate("Anne Smith", 1, datetime.date(1890), "F")
+        laureate3 = Laureate("Anne Smith", 1, datetime.date(1890, 1, 1), "F")
         db.session.add(laureate3)
         db.session.commit()
         assert len(Laureate.query.all()) == 3
 
-        Laureate.query.filter_by(gender == 'F').delete()
+        Laureate.query.filter_by(gender = 'F').delete()
         db.session.commit()
         assert len(Laureate.query.all()) == 1 
 
@@ -110,10 +110,10 @@ class TestCountries(TestCase):
         assert len(countries) == 2
 
     def test_filtering_countries(self):   
-        country = Country.query.filter_by(country_code == 'SE').first()
+        country = Country.query.filter_by(country_code = 'SE').first()
         assert country.name == 'Sweden' and country.nr_laureates == 10
 
-        country = Country.query.filter_by(population > 10000000).first()
+        country = Country.query.filter(Country.population > 10000000).first()
         assert country.name == 'United States' and country.nr_laureates == 18
 
     def test_add_delete_country(self):
@@ -122,7 +122,7 @@ class TestCountries(TestCase):
         db.session.commit()
         assert len(Country.query.all()) == 3
 
-        Country.query.filter_by(nr_prizes == 7).delete()
+        Country.query.filter_by(nr_prizes = 7).delete()
         db.session.commit()
         assert len(Country.query.all()) == 1 
 
