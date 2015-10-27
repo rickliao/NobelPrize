@@ -6,6 +6,7 @@ from app import db, app
 from models import Prize, Laureate, Country
 
 TEST_DATABASE_URI = "sqlite://"
+#TEST_DATABASE_URI = 'mysql://nobeladmin:cs373Prize@localhost/nobeldb'
 
 class TestPrizes(TestCase):
 

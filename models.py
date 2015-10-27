@@ -50,7 +50,7 @@ class Laureate(db.Model) :
     gender = db.Column(db.String(1))
     
     #One to many relationship
-    country_id = db.Column(db.Integer, db.ForeignKey('country.country_code'))
+    country_id = db.Column(db.Integer, db.ForeignKey('country.id'))
 
     #Constructor
     def __init__(self, name, nr_prizes, date_of_birth, gender) :
@@ -68,7 +68,8 @@ Class variables are columns
 Each instance of this class is a row
 """
 class Country(db.Model) :
-    country_code = db.Column(db.String(2), primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
+    country_code = db.Column(db.String(2))
     name = name = db.Column(db.String(80))
     nr_laureates = db.Column(db.Integer)
     nr_prizes = db.Column(db.Integer)
