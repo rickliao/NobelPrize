@@ -34,23 +34,31 @@ def render_individual_laureate(myName):
     prizes = laureate.prizes.all()
     prizesList = []
     prizesUrlList = []
-    print(prizes) 
+    year = 0 
     for prize in prizes:
-        prizesList += [prize.category+": "+prize.year]
+        prizeName = prize.category+": "+str(prize.year)
+        prizesList += [prizeName]
         prizesUrlList += [prize.url]
         year = prize.year
-        print(prizesList, year) 
-    if not laureate.country_id == None:
-        country = Country.query.get(laureate.country_id).first()
+
+    if not (laureate.country_id == None):
+        country = Country.query.get(laureate.country_id)
         countryName = country.name
         countryUrl = country.url
     else:
         countryName = "data unavailable"
         countryUrl = "/error"
 
-    entry = {'name':laureate.name, 'year':year, 'numPrizes':laureate.nr_prizes, 'prizes':prizesList, 'PrizesUrl':prizesUrlList, 'dob':laureate.date_of_birth, 'gender':laureate.gender, 'country':countryName, 'countryUrl':countryUrl}
+    entry = {'name':laureate.name, 'year':year, 'numPrizes':laureate.nr_prizes, 'prizes':prizesList, 'prizesUrl':prizesUrlList, 'dob':laureate.date_of_birth, 'gender':laureate.gender, 'country':countryName, 'countryUrl':countryUrl}
     return render_template('laureate_template.html', entry = entry)
 
+@app.route("/countries/<myName>")
+def render_individual_countries(myName):
+    country = Country.query.filter_by(name = myName.replace("_", " ")).first()
+
+    entry = {'name':country.name, 'code':country.country_code, 'numLaureates':country.nr_laureates, 'numPrizes':country.nr_prizes, 'pop':country.population}
+
+    return render_template('country_template.html', entry = entry)
 
 @app.route("/about")
 def render_about():
