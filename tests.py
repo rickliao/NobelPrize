@@ -16,8 +16,8 @@ class TestPrizes(TestCase):
 
     def setUp(self):
         db.create_all()
-        prize1 = Prize("Physics", 1991, 2, "motivation1")
-        prize2 = Prize("Peace", 1950, 1, "motivation2")
+        prize1 = Prize("Physics", 1991, 2, "motivation1", "u1")
+        prize2 = Prize("Peace", 1950, 1, "motivation2", "u2")
         db.session.add(prize1)
         db.session.add(prize2)
         db.session.commit()
@@ -38,7 +38,7 @@ class TestPrizes(TestCase):
         assert prize.category == 'Peace' and prize.motivation == "motivation2"  
 
     def test_add_delete_prizes(self):
-        prize3 = Prize("Physics", 2015, 4, "motivation3")
+        prize3 = Prize("Physics", 2015, 4, "motivation3", "u3")
         db.session.add(prize3)
         db.session.commit()
         assert len(Prize.query.all()) == 3
@@ -56,8 +56,8 @@ class TestLaureates(TestCase):
 
     def setUp(self):
         db.create_all()
-        laureate1 = Laureate("John Doe", 1, datetime.date(1956, 11, 2), "M")
-        laureate2 = Laureate("Jane Doe", 2, datetime.date(1939, 4, 7), "F")
+        laureate1 = Laureate("John Doe", 1, datetime.date(1956, 11, 2), "M", "u1", 1)
+        laureate2 = Laureate("Jane Doe", 2, datetime.date(1939, 4, 7), "F", "u2", 1)
         db.session.add(laureate1)
         db.session.add(laureate2)
         db.session.commit()
@@ -78,7 +78,7 @@ class TestLaureates(TestCase):
         assert laureate.name == 'Jane Doe' and laureate.gender == "F"  
 
     def test_add_delete_laureate(self):
-        laureate3 = Laureate("Anne Smith", 1, datetime.date(1890, 1, 1), "F")
+        laureate3 = Laureate("Anne Smith", 1, datetime.date(1890, 1, 1), "F", "u3", 1)
         db.session.add(laureate3)
         db.session.commit()
         assert len(Laureate.query.all()) == 3
@@ -96,8 +96,8 @@ class TestCountries(TestCase):
 
     def setUp(self):
         db.create_all()
-        country1 = Country("SE", "Sweden", 10, 7, 10000000)
-        country2 = Country("US", "United States", 18, 10, 300000000)
+        country1 = Country("SE", "Sweden", 10, 7, 10000000, "u1")
+        country2 = Country("US", "United States", 18, 10, 300000000, "u2")
         db.session.add(country1)
         db.session.add(country2)
         db.session.commit()
@@ -118,7 +118,7 @@ class TestCountries(TestCase):
         assert country.name == 'United States' and country.nr_laureates == 18
 
     def test_add_delete_country(self):
-        country3 = Country("UK", "United Kingdom", 11, 7, 50000000)
+        country3 = Country("UK", "United Kingdom", 11, 7, 50000000, "u3")
         db.session.add(country3)
         db.session.commit()
         assert len(Country.query.all()) == 3
