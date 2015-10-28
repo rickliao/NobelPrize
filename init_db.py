@@ -13,7 +13,7 @@ if response.ok:
     for prize in all["prizes"] :
         laureates = prize["laureates"]
         try:
-            prizeModel = Prize(prize["category"], prize["year"], len(laureates), laureates[0]["motivation"], "/"+prize["year"]+"/"+prize["category"])
+            prizeModel = Prize(prize["category"], prize["year"], len(laureates), laureates[0]["motivation"], "/prizes/"+prize["year"]+"/"+prize["category"])
         except KeyError:
             # has no motivation
             print("KeyError on "+prize["year"]+" "+prize["category"])
