@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends "navbar.html" %}
+{% block title %}
+  Prize
+{% endblock %}
+{% block body %}
+{{super()}}
+<body style="background-color:#eeeeee">
+  <div class="jumbotron">
+    <div class="container">
+      <h1>
+        Prize
+      </h1>
+      <table id="prize" class="display">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Year</th>
+            <th>Category</th>
+            <th>Number of Laureates</th>
+            <th>Laureate(s)</th>
+            <th>Motivation</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for prize in prizes %}
+            <tr>
+              <td><a href={{prize.url}}> {{prize.id}} </a></td>
+              <td>{{prize.year}}</td>
+              <td>{{prize.category}}</td>
+              <td>{{prize.nr_laureates}}</td>
+              <td>{% for laureate in prize.laureates[:-1] %}
+                  <a href={{laureate.url}}> {{laureate.name}} </a>,
+                {% endfor%}
+                <a href={{prize.laureates[-1].url}}> {{prize.laureates[-1].name}} </a>
+              </td>
+              <td>{{prize.motivation}}</td>
+            </tr>
+           {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+{% endblock %}

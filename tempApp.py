@@ -10,6 +10,36 @@ db = SQLAlchemy(app)
 def index():
     return render_template('index.html')
 
+@app.route("/prize")
+def render_prize():
+    prizes = Prize.query.filter_by().all()
+    return render_template('prize_db.html', prizes = prizes)
+
+@app.route("/laureates")
+def render_laureate():
+    laureates = Laureate.query.filter_by().all()
+    entries = []
+    for laureate in laureates:
+        prizes = laureate.prizes.all()
+        prizesList = []
+        prizesUrlList = []
+        for prize in prizes:
+            prizeName = prize.category+": "+str(prize.year)
+            prizesList += [prizeName]
+            prizesUrlList += [prize.url]
+
+        if not (laureate.country_id == None):
+            country = Country.query.get(laureate.country_id)
+            countryName = country.name
+            countryUrl = country.url
+        else:
+           countryName = "data unavailable"
+           countryUrl = "/error"
+        
+        entry = {'url':laureate.url, 'id':laureate.id, 'name':laureate.name, 'numPrizes':laureate.nr_prizes, 'prizes':prizesList, 'prizesUrl':prizesUrlList, 'dob':laureate.date_of_birth, 'gender':laureate.gender, 'country':countryName, 'countryUrl':countryUrl}
+        entries += [entry]
+
+    return render_template('laureate_db.html', entries = entries)
 
 @app.route("/prizes/<myYear>/<myCategory>")
 def render_individual_prize(myYear, myCategory):
