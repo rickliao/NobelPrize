@@ -41,6 +41,12 @@ def render_laureate():
 
     return render_template('laureate_db.html', entries = entries)
 
+@app.route("/countries")
+def render_countries():
+    countries = Country.query.filter_by().all()
+    return render_template('country_db.html', countries = countries)
+
+
 @app.route("/prizes/<myYear>/<myCategory>")
 def render_individual_prize(myYear, myCategory):
     prize = Prize.query.filter_by(year = myYear, category = myCategory).first()

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends "navbar.html" %}
+{% block title %}
+  Country
+{% endblock %}
+{% block body %}
+{{super()}}
+<body style="background-color:#eeeeee">
+  <div class="jumbotron">
+    <div class="container">
+      <h1>
+        Country
+      </h1>
+      <table id="country" class="display">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Number of Prizes</th>
+            <th>Number of Laureates</th>
+            <th>Population</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for country in countries %}
+            <tr>
+              <td><a href={{country.url}}> {{country.id}} </a></td>
+              <td>{{country.country_code}}</td>
+              <td>{{country.name}}</td>
+              <td>{{country.nr_prizes}}</td>
+              <td>{{country.nr_laureates}}</td>
+              <td>{{country.population}}</td>
+            </tr>
+           {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+{% endblock %}
