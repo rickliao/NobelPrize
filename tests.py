@@ -30,6 +30,10 @@ class TestPrizes(TestCase):
         prizes = Prize.query.all()
         assert len(prizes) == 2
 
+    def test_repr(self):
+        prize = Prize.query.filter_by(category="Physics", year=1991).first()
+        assert repr(prize) == "<Prize 'Physics'>" 
+
     def test_filtering_prizes(self):   
         prize = Prize.query.filter_by(category = 'Physics').first()
         assert prize.year == 1991 and prize.motivation == "motivation1"
@@ -70,6 +74,10 @@ class TestLaureates(TestCase):
         laureates = Laureate.query.all()
         assert len(laureates) == 2
 
+    def test_repr(self):
+        laureate = Laureate.query.filter_by(name="John Doe", gender="M").first()
+        assert repr(laureate) == "<Laureate 'John Doe'>" 
+
     def test_filtering_laureates(self):   
         laureate = Laureate.query.filter_by(name = 'John Doe').first()
         assert laureate.nr_prizes == 1 and laureate.gender == "M"
@@ -109,6 +117,10 @@ class TestCountries(TestCase):
     def test_get_all_countries(self):
         countries = Country.query.all()
         assert len(countries) == 2
+
+    def test_repr(self):
+        country = Country.query.filter_by(name="Sweden").first()
+        assert repr(country) == "<Country 'Sweden'>" 
 
     def test_filtering_countries(self):   
         country = Country.query.filter_by(country_code = 'SE').first()
