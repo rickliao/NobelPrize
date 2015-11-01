@@ -55,6 +55,6 @@ idb.log:
 	git log > IDB1.log
 
 TestModels.tmp: tests.py
-	coverage3 run --omit=*flask*,*sqlalchemy*,*dist-packages* --branch tests.py >  TestModels.tmp 2>&1
+	coverage3 run --omit=app.py,*flask*,*sqlalchemy*,*dist-packages* --branch tests.py >  TestModels.tmp 2>&1
 	coverage3 report -m              >> TestModels.tmp
 	cat TestModels.tmp
