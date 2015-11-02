@@ -88,8 +88,12 @@ def render_about():
 @app.route("/aboutT/")
 def test_link():
 	print ('my test fun works')
-	os.system("make test")
-	return 'hi'
+	#os.system("make test")
+	f = open("TestModels.tmp")
+	result = ""
+	for line in f:
+		result += line
+	return render_template('aboutT.html', result=result);
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends "navbar.html" %}
+{% block title %}
+  Unit Test Result
+{% endblock %}
+{% block body %}
+{{super()}}
+<body style="background-color:#eeeeee">
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Coverage result:</h1>
+      <div class="well well-sm">
+        <p>{{result}}</p>
+      </div> 
+    </div>
+  </div>
+</body>
+{% endblock %}
