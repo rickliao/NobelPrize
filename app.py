@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
+import os
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://nobeladmin:cs373Prize@localhost/nobeldb'
@@ -83,6 +84,12 @@ def render_dorothy_crowfoot_hodgkin():
 @app.route("/about")
 def render_about():
 	return render_template('about.html');
+
+@app.route("/aboutT/")
+def test_link():
+	print ('my test fun works')
+	os.system("make test")
+	return 'hi'
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')

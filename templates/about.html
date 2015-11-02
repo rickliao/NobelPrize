@@ -63,6 +63,8 @@
         We used requests from python to get information from the API. For example, a get call to <code>http://api.nobelprize.org/v1/prize.json?year=2008&category=economics</code> will return the information in json for nobel prize in economics in 2008. For each prize, the API also return the laureate's id, which is used to get laureate information from the same API. A get call like <code>http://api.nobelprize.org/v1/laureate.json?id=919</code> returns the information associated with the laureate whose id is 919. 
       <h3><a href='https://restcountries.eu/'>Countries API</a></h3>
         We used this API to get information on coutnries. Each laureate returned from Nobel Prize API contains a country code, and we use this country code to scrap data of the country. For example, a get call to <code>https://restcountries.eu/rest/v1/alpha/us</code> will return the information in json on country with country code <code>us</code>, which is United States.
+      <h2>Tests</h2>
+        <a href="/aboutT/">Run Tests</a>
     </div>
   </div>
 {% endblock %}
