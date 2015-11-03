@@ -1,4 +1,4 @@
-from modules import db
+from db import db
 
 """
 Additional table to map the many to many relationship between Prize and Laureate
