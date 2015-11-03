@@ -140,8 +140,8 @@ def test_link():
     return render_template('aboutT.html', result=result);
 
 @app.errorhandler(404)
-def error_404():
-    return render_template('error.html')
+def error_404(error):
+    return render_template('error.html'), 404
 
 @app.route("/error")
 def error():
