@@ -1,10 +1,16 @@
 from flask import render_template, abort
 from db import app
+from flask.ext.restless import APIManager
 from models import Prize, Laureate, Country
 import requests
 import json
 from urllib.parse import quote
 import os
+
+manager = APIManager(app, flask_sqlalchemy_db=db)
+manager.create_api(Prize, methods=['GET'], include_columns=['id', 'category', 'laureates', 'year', 'nr_laureates'])
+manager.create_api(Laureate, methods=['GET'], include_columns=['id', 'name', 'country_id', 'date_of_birth', 'gender', 'nr_prizes'])
+manager.create_api(Country, methods=['GET'], include_columns=['country_code', 'name', 'laureates', 'nr_laureates', 'nr_prizes', 'population'])
 
 @app.route("/")
 def index():
