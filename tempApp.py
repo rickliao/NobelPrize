@@ -1,13 +1,10 @@
-from flask import Flask, render_template
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask import render_template
+from db import app
 from models import Prize, Laureate, Country
 import requests
 import json
 from urllib.parse import quote
-
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://nobeladmin:cs373Prize@localhost/nobeldb'
-db = SQLAlchemy(app)
+import os
 
 @app.route("/")
 def index():
@@ -113,7 +110,7 @@ def render_individual_countries(myName):
 
 @app.route("/about")
 def render_about():
-	return render_template('about.html');
+    return render_template('about.html');
 
 def getImage(query):
     # embed image
@@ -130,6 +127,16 @@ def getImage(query):
 
     print(width, height)
     return (firstResult['url'], width, height)
+
+@app.route("/aboutT")
+def test_link():
+    os.system("make test")
+    f = open("TestModels.tmp", 'r')
+    result = []
+    for line in f:
+        result += [line]
+    os.system("make clean")    
+    return render_template('aboutT.html', result=result);
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=3000)

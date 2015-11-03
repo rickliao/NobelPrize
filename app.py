@@ -88,7 +88,7 @@ def render_about():
 @app.route("/aboutT/")
 def test_link():
 	print ('my test fun works')
-	#os.system("make test")
+	os.system("make test")
 	f = open("TestModels.tmp")
 	result = ""
 	for line in f:

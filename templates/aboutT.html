@@ -10,7 +10,9 @@
     <div class="container">
       <h1>Coverage result:</h1>
       <div class="well well-sm">
-        <p>{{result}}</p>
+        <p>{% for line in result %}
+               {{line}}<br>
+           {% endfor %}</p>
       </div> 
     </div>
   </div>
