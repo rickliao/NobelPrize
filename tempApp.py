@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, abort
 from db import app
 from models import Prize, Laureate, Country
 import requests
@@ -51,7 +51,8 @@ def render_countries():
 def render_individual_prize(myYear, myCategory):
     prize = Prize.query.filter_by(year = myYear, category = myCategory).first()
     if prize == None:
-        return "no such prize, dummy"
+        abort(404)
+
     laureates = prize.laureates
     laureateNames = []
     laureateUrls = []
@@ -70,7 +71,7 @@ def render_individual_prize(myYear, myCategory):
 def render_individual_laureate(myName):
     laureate = Laureate.query.filter_by(name=myName.replace("_"," ")).first()
     if laureate == None:
-        return "you've done goofed off"
+        abort(404)
     
     prizes = laureate.prizes.all()
     prizesList = []
@@ -137,6 +138,14 @@ def test_link():
         result += [line]
     os.system("make clean")    
     return render_template('aboutT.html', result=result);
+
+@app.errorhandler(404)
+def error_404():
+    return render_template('error.html')
+
+@app.route("/error")
+def error():
+    return render_template('error.html')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=3000)
