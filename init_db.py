@@ -1,5 +1,5 @@
 #!flask/bin/python
-from app import db
+from db import db
 from models import Prize, Laureate, Country
 import requests
 import json
@@ -46,7 +46,6 @@ if response.ok:
                              print(countryModel)
                              db.session.commit()
 
-                     countryId = countryModel.id
                      countryModel.nr_laureates += 1
                      countryModel.nr_prizes += 1
                      db.session.commit()
@@ -61,7 +60,7 @@ if response.ok:
                  laureateModel = Laureate.query.filter_by(name = personName).first()
                  laureateModel.nr_prizes = laureateModel.nr_prizes + 1
                  if laureateModel.country_id != None :
-                     c = Country.query.get(laureateModel.country_id)
+                     c = Country.query.get(laureateModel.country_code)
                      c.nr_prizes += 1
 
             prizeModel.laureates.append(laureateModel)
