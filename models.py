@@ -1,4 +1,4 @@
-from app import db
+from modules import db
 
 """
 Additional table to map the many to many relationship between Prize and Laureate
@@ -36,7 +36,7 @@ class Prize(db.Model) :
         self.url = url
 
     def __repr__(self):
-        return '<Prize %r>' % self.category
+        return '<Prize ' + self.category + ' ' + str(self.year) + '>'
 
 
 """
@@ -48,12 +48,12 @@ class Laureate(db.Model) :
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80))
     nr_prizes = db.Column(db.Integer)
-    date_of_birth = db.Column(db.DateTime)
-    gender = db.Column(db.String(1))
+    date_of_birth = db.Column(db.String(10))
+    gender = db.Column(db.String(3))
     url = db.Column(db.String(90))
     
     #One to many relationship
-    country_id = db.Column(db.Integer, db.ForeignKey('country.id'))
+    country_id = db.Column(db.String(2), db.ForeignKey('country.country_code'))
 
     #Constructor
     def __init__(self, name, nr_prizes, date_of_birth, gender, url, country_id) :
@@ -73,8 +73,7 @@ Class variables are columns
 Each instance of this class is a row
 """
 class Country(db.Model) :
-    id = db.Column(db.Integer, primary_key=True)
-    country_code = db.Column(db.String(2))
+    country_code = db.Column(db.String(2), primary_key=True)
     name = name = db.Column(db.String(80))
     nr_laureates = db.Column(db.Integer)
     nr_prizes = db.Column(db.Integer)
@@ -82,7 +81,7 @@ class Country(db.Model) :
     url = db.Column(db.String(90))
     
     #One to many relationship
-    laureates = db.relationship('Laureate', backref='country', lazy='dynamic')
+    laureates = db.relationship('Laureate', backref='country', lazy='select')
     
     #Constructor
     def __init__(self, country_code, name, nr_laureates, nr_prizes, population, url) :

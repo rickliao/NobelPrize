@@ -1,8 +1,7 @@
 import unittest
 from flask.ext.testing import TestCase
-import datetime
 
-from app import db, app
+from modules import db, app
 from models import Prize, Laureate, Country
 
 TEST_DATABASE_URI = "sqlite://"
@@ -32,7 +31,7 @@ class TestPrizes(TestCase):
 
     def test_repr(self):
         prize = Prize.query.filter_by(category="Physics", year=1991).first()
-        assert repr(prize) == "<Prize 'Physics'>" 
+        assert repr(prize) == "<Prize Physics 1991>" 
 
     def test_filtering_prizes(self):   
         prize = Prize.query.filter_by(category = 'Physics').first()
@@ -60,8 +59,8 @@ class TestLaureates(TestCase):
 
     def setUp(self):
         db.create_all()
-        laureate1 = Laureate("John Doe", 1, datetime.date(1956, 11, 2), "M", "u1", 1)
-        laureate2 = Laureate("Jane Doe", 2, datetime.date(1939, 4, 7), "F", "u2", 1)
+        laureate1 = Laureate("John Doe", 1, "1956-11-2", "M", "u1", 1)
+        laureate2 = Laureate("Jane Doe", 2, "1939-4-7", "F", "u2", 1)
         db.session.add(laureate1)
         db.session.add(laureate2)
         db.session.commit()
@@ -86,7 +85,7 @@ class TestLaureates(TestCase):
         assert laureate.name == 'Jane Doe' and laureate.gender == "F"  
 
     def test_add_delete_laureate(self):
-        laureate3 = Laureate("Anne Smith", 1, datetime.date(1890, 1, 1), "F", "u3", 1)
+        laureate3 = Laureate("Anne Smith", 1, "1890-1-1", "F", "u3", 1)
         db.session.add(laureate3)
         db.session.commit()
         assert len(Laureate.query.all()) == 3
