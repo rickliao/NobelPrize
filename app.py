@@ -107,6 +107,8 @@ def render_individual_laureate(myName):
 @app.route("/countries/<myName>")
 def render_individual_countries(myName):
     country = Country.query.filter_by(name = myName.replace("_", " ")).first()
+    if country == None:
+        abort(404)
 
     entry = {'name':country.name, 'code':country.country_code, 'numLaureates':country.nr_laureates, 'numPrizes':country.nr_prizes, 'pop':country.population}
 
