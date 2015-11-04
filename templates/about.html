@@ -8,11 +8,13 @@
 <body style="background-color:#eeeeee">
   <div class="jumbotron">
     <div class="container">
-      <h1>Team Noble Prize</h1>
-      <h2>Members:</h2>
-      <p>Ellen Wiberg, Christopher Bentson, Chrystian Bueno, Rick Liao</p>
+      <div class="center-content">
+        <h1>Team Noble Prize</h1>
+        <h2>Members:</h2>
+        <p>Ellen Wiberg, Christopher Bentson, Chrystian Bueno, Rick Liao</p>
+      </div>
       <div class="container">
-        <div class="col-xs-12 col-s-12 col-md-12 center-content">
+        <div class="col-xs-12 col-s-12 col-md-6 center-content">
           <h3>Ellen Wiberg</h3>
           <img src='/static/EllenWiberg.jpg' class="img-circle" height='200', width='200'>
           <p>Bio: I'm a senior in the Computer Science Department at the Univeristy of Texas at Austin. I've had two internships with Bazaarvoice and Workday.</p>
@@ -21,7 +23,7 @@
 	  <p>No. of issues: 5</p>
 	  <p>No. of unit tests: 9</p>
         </div>
-        <div class="col-xs-12 col-s-12 col-md-12 center-content">
+        <div class="col-xs-12 col-s-12 col-md-6 center-content">
           <h3>Christopher Bentson</h3>
           <img src='/static/chris.jpg' class="img-circle" height='200', width='200'>
           <p>Bio: I am a Computer Science student going on in my 5th year. I have had 2 internships with JP Morgan as an Application Developer in the Risk Finance and Treasury Technology line of business. </p>
@@ -30,7 +32,7 @@
 	  <p>No. of issues: 2</p>
           <p>No. of unit tests: 0</p>
         </div>
-        <div class="col-xs-12 col-s-12 col-md-12 center-content">
+        <div class="col-xs-12 col-s-12 col-md-6 center-content">
           <h3>Chrystian Bueno</h3>
           <img src='static/Chrystian.png' class="img-circle" height='200' width='200'>
           <p>Bio: I am a fourth year computer science student. I've had 2 internships; one as a Student Web Developer and the other as a Software Engineer Intern.</p>
@@ -39,7 +41,7 @@
 	  <p>No. of issues: 2</p>
 	  <p>No. of unit tests: 0</p>
         </div>
-        <div class="col-xs-12 col-s-12 col-md-12 center-content">
+        <div class="col-xs-12 col-s-12 col-md-6 center-content">
           <h3>Rick Liao</h3>
           <img src='/static/rick.jpg' class="img-circle" height='200', width='200'>
           <p>Bio: I am a fourth year computer science student. My research is about linked data and semantics web.</p>
@@ -48,22 +50,22 @@
           <p>No. of issues: 8</p>
           <p>No. of unit tests: 0</p>
         </div>
-      </div> 
-      <h2>Stats</h2>
-      <ul>
-        <li>Total no. of commits: 41</li>
-        <li>Total no. of issues: 19</li>
-        <li>Total no. of unit tests: 9</li>
-        <li><b><a href='https://jsapi.apiary.io/previews/nobelprize/reference'>Apiary API</a></b></li>
-        <li><b><a href='https://github.com/rickliao/NobelPrize/issues'>GitHub Issue Tracker</a></b></li>
-        <li><b><a href='https://github.com/rickliao/NobelPrize'>GitHub Repo</a></b></li>
-        <li><b><a href='https://github.com/rickliao/NobelPrize/wiki'>GitHub Wiki</a></b></li>
-      </ul>
+      </div>
+      <div class="center-content">
+        <h2>Stats</h2>
+        <p>Total no. of commits: 41</p>
+        <p>Total no. of issues: 19<p>
+        <p>Total no. of unit tests: 9<p>
+        <p><b><a href='https://jsapi.apiary.io/previews/nobelprize/reference'>Apiary API</a></b><p>
+        <p><b><a href='https://github.com/rickliao/NobelPrize/issues'>GitHub Issue Tracker</a></b><p>
+        <p><b><a href='https://github.com/rickliao/NobelPrize'>GitHub Repo</a></b><p>
+        <p><b><a href='https://github.com/rickliao/NobelPrize/wiki'>GitHub Wiki</a></b><p>
+      </div>
       <h2>Data</h2>
       <h3><a href='https://nobelprize.readme.io/v1.0'>Nobel Prize API</a></h3>
-        We used requests from python to get information from the API. For example, a get call to <code>http://api.nobelprize.org/v1/prize.json?year=2008&category=economics</code> will return the information in json for nobel prize in economics in 2008. For each prize, the API also return the laureate's id, which is used to get laureate information from the same API. A get call like <code>http://api.nobelprize.org/v1/laureate.json?id=919</code> returns the information associated with the laureate whose id is 919. 
+      <p>We used requests from python to get information from the API. For example, a get call to <code>http://api.nobelprize.org/v1/prize.json?year=2008&category=economics</code> will return the information in json for nobel prize in economics in 2008. For each prize, the API also return the laureate's id, which is used to get laureate information from the same API. A get call like <code>http://api.nobelprize.org/v1/laureate.json?id=919</code> returns the information associated with the laureate whose id is 919.</p>
       <h3><a href='https://restcountries.eu/'>Countries API</a></h3>
-        We used this API to get information on coutnries. Each laureate returned from Nobel Prize API contains a country code, and we use this country code to scrap data of the country. For example, a get call to <code>https://restcountries.eu/rest/v1/alpha/us</code> will return the information in json on country with country code <code>us</code>, which is United States.
+      <p>We used this API to get information on coutnries. Each laureate returned from Nobel Prize API contains a country code, and we use this country code to scrap data of the country. For example, a get call to <code>https://restcountries.eu/rest/v1/alpha/us</code> will return the information in json on country with country code <code>us</code>, which is United States.</p>
       <h2>Tests</h2>
         <a href="/aboutT">Run Tests</a>
     </div>
