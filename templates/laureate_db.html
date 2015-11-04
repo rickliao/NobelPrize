@@ -26,8 +26,8 @@
         <tbody>
           {% for entry in entries %}
             <tr>
-              <td><a href={{entry['url']}}> {{entry['id']}} </a></td>
-              <td>{{entry['name']}}</td>
+              <td>{{entry['id']}}</td>
+              <td><a href={{entry['url']}}> {{entry['name']}} </a></td>
               <td>{{entry['numPrizes']}}</td>
               <td>
                 {% for prize in entry['prizes'][:-1] %}
@@ -39,7 +39,7 @@
               <td>{{entry['gender']}}</td>
               <td> {% if entry['countryUrl'] is equalto "/error" %} 
                      {{entry['country']}}
-                   {% elif %} 
+                   {% else %} 
                      <a href={{entry['countryUrl']}}> {{entry['country']}} </a>
                    {% endif %}
               </td>

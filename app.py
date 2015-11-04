@@ -94,7 +94,7 @@ def render_individual_laureate(myName):
         countryName = country.name
         countryUrl = country.url
     else:
-        countryName = "data unavailable"
+        countryName = "N/A"
         countryUrl = "/error"
 
     entry = {'name':laureate.name, 'year':year, 'numPrizes':laureate.nr_prizes, 'prizes':prizesList, 'prizesUrl':prizesUrlList, 'dob':laureate.date_of_birth, 'gender':laureate.gender, 'country':countryName, 'countryUrl':countryUrl}

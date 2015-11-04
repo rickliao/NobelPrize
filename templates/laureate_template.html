@@ -16,11 +16,16 @@
         Prizes: 
         {% for prize in entry['prizes'][:-1] %}
           <a href={{entry['prizesUrl'][loop.index0]}}> {{prize}} </a>,
-        {% endfor%}
+        {% endfor%} 
         <a href={{entry['prizesUrl'][-1]}}> {{entry['prizes'][-1]}} </a> <br>
-        Date of Birth: {{entry['dob']}} <br>
         Gender: {{entry['gender']}} <br>
-        Country: <a href={{entry['countryUrl']}}> {{entry['country']}} </a> </h2>
+        Date of Birth: {{entry['dob']}} <br>
+        {% if entry['countryUrl'] != "/error" %}
+            Country: <a href={{entry['countryUrl']}}> {{entry['country']}} </a>
+        {% else %}
+            Country: {{entry['country']}}
+        {% endif %}
+        </h2>
       </div>
       {% block content %}
           <img src={{imageUrl}} height={{height}} width={{width}}>
