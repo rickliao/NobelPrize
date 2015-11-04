@@ -1,7 +1,7 @@
 import unittest
 from flask.ext.testing import TestCase
 
-from modules import db, app
+from db import db, app
 from models import Prize, Laureate, Country
 
 TEST_DATABASE_URI = "sqlite://"

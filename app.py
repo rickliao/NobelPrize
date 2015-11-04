@@ -1,5 +1,5 @@
 from flask import render_template, abort
-from db import app
+from db import db, app
 from flask.ext.restless import APIManager
 from models import Prize, Laureate, Country
 import requests
@@ -39,7 +39,7 @@ def render_laureate():
             countryName = country.name
             countryUrl = country.url
         else:
-           countryName = "data unavailable"
+           countryName = "N/A"
            countryUrl = "/error"
         
         entry = {'url':laureate.url, 'id':laureate.id, 'name':laureate.name, 'numPrizes':laureate.nr_prizes, 'prizes':prizesList, 'prizesUrl':prizesUrlList, 'dob':laureate.date_of_birth, 'gender':laureate.gender, 'country':countryName, 'countryUrl':countryUrl}
@@ -154,4 +154,4 @@ def error():
     return render_template('error.html')
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=3000)
+    app.run(host='0.0.0.0', port=5000)

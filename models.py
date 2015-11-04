@@ -49,7 +49,7 @@ class Laureate(db.Model) :
     name = db.Column(db.String(80))
     nr_prizes = db.Column(db.Integer)
     date_of_birth = db.Column(db.String(10))
-    gender = db.Column(db.String(3))
+    gender = db.Column(db.String(10))
     url = db.Column(db.String(90))
     
     #One to many relationship

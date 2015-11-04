@@ -4,7 +4,7 @@ from models import Prize, Laureate, Country
 import requests
 import json
 
-#db.create_all()
+db.create_all()
 response = requests.get("http://api.nobelprize.org/v1/prize.json")
 if response.ok:
     all = json.loads(response.text)
@@ -49,7 +49,7 @@ if response.ok:
                      countryModel.nr_laureates += 1
                      countryModel.nr_prizes += 1
                      db.session.commit()
-                     laureateModel = Laureate(personName, 1, person["born"], person["gender"], "/laureates/"+personName.replace(" ","_"), countryId)
+                     laureateModel = Laureate(personName, 1, person["born"], person["gender"], "/laureates/"+personName.replace(" ","_"), countryCode)
                      
                  else:
                      laureateModel = Laureate(personName, 1, person["born"], person["gender"], "/laureates/"+personName.replace(" ","_"), None)
@@ -60,7 +60,7 @@ if response.ok:
                  laureateModel = Laureate.query.filter_by(name = personName).first()
                  laureateModel.nr_prizes = laureateModel.nr_prizes + 1
                  if laureateModel.country_id != None :
-                     c = Country.query.get(laureateModel.country_code)
+                     c = Country.query.get(laureateModel.country_id)
                      c.nr_prizes += 1
 
             prizeModel.laureates.append(laureateModel)

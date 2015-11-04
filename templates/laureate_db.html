@@ -37,7 +37,12 @@
               </td>
               <td>{{entry['dob']}}</td>
               <td>{{entry['gender']}}</td>
-              <td><a href={{entry['countryUrl']}}> {{entry['country']}} </a></td>
+              <td> {% if entry['countryUrl'] is equalto "/error" %} 
+                     {{entry['country']}}
+                   {% elif %} 
+                     <a href={{entry['countryUrl']}}> {{entry['country']}} </a>
+                   {% endif %}
+              </td>
             </tr>
            {% endfor %}
         </tbody>
