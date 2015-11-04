@@ -1,3 +1,191 @@
+commit eea828ade1f2c51b482bd7456a49364cffce865c
+Author: User <rickliao>
+Date:   Wed Nov 4 02:50:50 2015 +0000
+
+    removed link to country if they dont have country
+
+commit bca7e59d2620ca0d0c77a1a95a45310d40a85bf4
+Author: Rick <rick@rick-Inspiron-N5010>
+Date:   Tue Nov 3 18:21:18 2015 -0600
+
+    about page and home page modifications
+
+commit 340c475073b08eb2e2ecc17b3d806ab26aa18a56
+Merge: 0d0ae82 b303035
+Author: User <rickliao>
+Date:   Wed Nov 4 00:14:47 2015 +0000
+
+    Merge branch 'master' of https://github.com/rickliao/NobelPrize
+
+commit 0d0ae82cd10090ef3f1f3b5d5575a71fa950d8f8
+Author: User <rickliao>
+Date:   Wed Nov 4 00:14:37 2015 +0000
+
+    merged everything
+
+commit b3030359109055ff9f89af7f8e283b864658b5ee
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Tue Nov 3 17:49:10 2015 -0600
+
+    Transferring blueprint from apiary.io
+
+commit 31e3a7e2a2308f06bc4275bfc3224e6f48bbd2d8
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Tue Nov 3 17:47:10 2015 -0600
+
+    Transferring blueprint from apiary.io
+
+commit 3b1e2cad911d141dd4d77c748e64a721db82fd9c
+Author: Ellen Wiberg <ellen.wiberg@utexas.edu>
+Date:   Tue Nov 3 17:08:02 2015 -0600
+
+    Update init db to reflect changes in models
+
+commit d794781141d2f8534b80f811edae3a2a1ffa1833
+Author: Ellen Wiberg <ellen.wiberg@utexas.edu>
+Date:   Tue Nov 3 17:04:27 2015 -0600
+
+    Added API to app
+
+commit b6ada8cdd29e58408adf306c40aa838b59fdf4bd
+Merge: 0fb5a43 00e80c4
+Author: Ellen Wiberg <ellen.wiberg@utexas.edu>
+Date:   Tue Nov 3 16:54:59 2015 -0600
+
+    Merging
+
+commit 0fb5a43d4f1aa9d28e17f07b3411869fae26d6b2
+Author: Ellen Wiberg <ellen.wiberg@utexas.edu>
+Date:   Tue Nov 3 16:51:54 2015 -0600
+
+    Start adding API functionality
+
+commit 00e80c48332e23825eb748ba04f77c7e8b4c1a34
+Author: User <rickliao>
+Date:   Tue Nov 3 22:49:00 2015 +0000
+
+    rename app
+
+commit 493494f79ee21f8011a990765addd920047bc10f
+Author: User <rickliao>
+Date:   Tue Nov 3 22:27:55 2015 +0000
+
+    finished error pages
+
+commit 6ca76fcf064da6d4b9e6b4e9db39c04ed8e53991
+Author: User <rickliao>
+Date:   Tue Nov 3 22:23:25 2015 +0000
+
+    started working on error page
+
+commit dd73675864c072386eb055555457b54253b5a6e0
+Author: User <rickliao>
+Date:   Tue Nov 3 22:07:07 2015 +0000
+
+    deleted cycle reference, made sure run test runs on tempApp
+
+commit 79b704883cd65567a11e465565428e154e8fe292
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Mon Nov 2 00:00:15 2015 -0600
+
+    template for run tests
+
+commit 8e5cc26288e87b6ab759291addad3838949ec372
+Author: Chris <crb828@ymail.com>
+Date:   Sun Nov 1 23:33:19 2015 -0600
+
+    added button for running tests and a way to run the tests when that button is clicked
+
+commit 0ce16b706df9a83339e4f2940dcbcd4c31931abd
+Author: User <rickliao>
+Date:   Sun Nov 1 21:50:25 2015 +0000
+
+    ignore app.py in test
+
+commit c401ce346494064d68406aaceeded3f9346fa57f
+Author: User <rickliao>
+Date:   Sun Nov 1 21:47:20 2015 +0000
+
+    better unittest
+
+commit cb1874a1a0d0e42ea4c95e013b064d7ecafe0797
+Author: User <rickliao>
+Date:   Thu Oct 29 17:16:31 2015 +0000
+
+    added images to all pages
+
+commit 917360e1446db9ca2f3a7434ee8cc5672c707dd2
+Author: User <rickliao>
+Date:   Thu Oct 29 04:12:07 2015 +0000
+
+    all webpages dynamic
+
+commit 392195e7dd1d54a40a976a34868f72cc2be1d04a
+Author: User <rickliao>
+Date:   Thu Oct 29 02:30:57 2015 +0000
+
+    prize and laureate tables
+
+commit 4c96c009b012e769a691e60e1280ca9cdcf44ceb
+Author: User <rickliao>
+Date:   Wed Oct 28 22:34:54 2015 +0000
+
+    finished all individual pages
+
+commit 23af5845cef9c82c008c183d39ac4abd7890c039
+Author: User <rickliao>
+Date:   Wed Oct 28 20:29:12 2015 +0000
+
+    started doing laureate pages
+
+commit 927414327349ed5ce25f080eba15f1c7a0887532
+Author: User <rickliao>
+Date:   Wed Oct 28 19:58:16 2015 +0000
+
+    temp app file
+
+commit d667355bbf25e097c2f5782b25fa113712193c60
+Author: User <rickliao>
+Date:   Wed Oct 28 18:49:13 2015 +0000
+
+    finished loading db
+
+commit e41e4dbf08fa00bdab7611296f23a24573f75e48
+Author: User <rickliao>
+Date:   Wed Oct 28 06:47:02 2015 +0000
+
+    starts on loading data
+
+commit 484e4b39039445088e04be16ef57880a76f3c47e
+Author: User <rickliao>
+Date:   Tue Oct 27 21:05:19 2015 +0000
+
+    fixed database
+
+commit cf6096f87d1578a9f763daf1495643883821e97e
+Author: User <rickliao>
+Date:   Mon Oct 26 23:33:13 2015 +0000
+
+    Started adding db support
+
+commit de73072dc48fe79996944dc59408ba5d8c4c8167
+Author: Ellen Wiberg <ellen.wiberg@utexas.edu>
+Date:   Mon Oct 26 16:32:00 2015 -0500
+
+    Preparing to set up database
+
+commit 34872088f2990323c26d06c31a90e9a6d6c69f56
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Thu Oct 22 19:59:01 2015 -0500
+
+    Create README.md
+
+commit 3c0a197324ca3b32c88e5aa45833bc33c4b1d218
+Author: User <rickliao>
+Date:   Fri Oct 23 00:48:22 2015 +0000
+
+    adding commit log
+
 commit 0e223435e282bced8e661a1b36ffcca6cc9fcbbb
 Author: Ellen Wiberg <ellen.wiberg@utexas.edu>
 Date:   Thu Oct 22 19:43:36 2015 -0500
