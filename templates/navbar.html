@@ -12,6 +12,7 @@
     <script src="/static/bootstrap.min.js"></script>
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.js"></script>
     <script type="text/javascript" charset="utf8" src="/static/start_datatable.js"></script>
+    <script type="text/javascript" charset="utf8" src="/static/functions.js"></script>
     {% endblock %}
   </head> 
   {% block body %}
@@ -24,15 +25,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Nobel Prize</a>
+          <a class="navbar-left" style="padding-top:10px;" href="/"><img src="/static/NobelPrizeLogo.png" name="NobelPrize" onmouseover="invs(this.name)" onmouseout="rmInvs(this.name)" height="65px" width="250px"></a>
         </div>
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="navigationbar">
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="pullDown-left" href="/">Home</a></li>
-            <li><a class="pullDown-left" href="/prize">Prize</a></li>
-            <li><a class="pullDown-left" href="/laureates">Laureate</a></li>
-            <li><a class="pullDown-left" href="/countries">Country</a></li>
-            <li><a class="pullDown-left pullDown-right" href="/about">About</a></li>
+            <li><a href="/"><img src="/static/HomeLogo.png" name="Home" onmouseover="invs(this.name)" onmouseout="rmInvs(this.name)" height="46px" width="112px"/></a></li>
+            <li><a href="/prize"><img src="/static/PrizeLogo.png" name="Prize" onmouseover="invs(this.name)" onmouseout="rmInvs(this.name)" height="52px" width="99px"/></a></li>
+            <li><a href="/laureates"><img src="/static/LaureateLogo.png" name="Laureate" onmouseover="invs(this.name)" onmouseout="rmInvs(this.name)" height="46px" width="153px"/></a></li>
+            <li><a href="/countries"><img src="/static/CountryLogo.png" name="Country" onmouseover="invs(this.name)" onmouseout="rmInvs(this.name)" height="55px" width="139px"/></a></li>
+            <li><a href="/about"><img src="/static/AboutLogo.png" name="About" onmouseover="invs(this.name)" onmouseout="rmInvs(this.name)" height="46px" width="114px"/></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
