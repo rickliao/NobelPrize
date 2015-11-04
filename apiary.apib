@@ -1,5 +1,5 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: http://104.130.226.110:5000/
 
 # nobelprize
 
@@ -7,7 +7,7 @@ nobelprize is an api to get various information about nobel prizes, their laurea
 
 #group Prizes
 
-## Prize collection [/prize]
+## Prize collection [/api/prize]
 
 ### List All Prizes [GET]
 
@@ -24,7 +24,7 @@ nobelprize is an api to get various information about nobel prizes, their laurea
             }, ...
         ]
         
-## Prize by id [/prize/id/{id}]
+## Prize by id [/api/prize/{id}]
 
 ### Get Prizes By ID [GET]
 
@@ -42,7 +42,7 @@ nobelprize is an api to get various information about nobel prizes, their laurea
             "motivation: "\"for the discovery of neutrino oscillations, which shows that neutrinos have mass\""
         }
         
-## Prize by year [/prize/year/{year}]
+## Prize by year [/api/prize/year/{year}]
 
 ### List Prizes By Year [GET]
 
@@ -62,7 +62,7 @@ nobelprize is an api to get various information about nobel prizes, their laurea
             }, ...
         ]
     
-## Prize by category [/prize/category/{category}]
+## Prize by category [/api/prize/category/{category}]
 
 ### List Prizes By Category [GET]
 
@@ -84,7 +84,7 @@ nobelprize is an api to get various information about nobel prizes, their laurea
 
 #group Laureates
 
-## Laureate collection [/laureate]
+## Laureate collection [/api/laureate]
 
 ### List All Laureates [GET]
 
@@ -102,7 +102,7 @@ nobelprize is an api to get various information about nobel prizes, their laurea
             }, ...
         ]
         
-## Laureate by id [/laureate/id/{id}]
+## Laureate by id [/api/laureate/{id}]
 
 ### Get Laureate By ID [GET]
 
@@ -121,7 +121,7 @@ nobelprize is an api to get various information about nobel prizes, their laurea
             "prize":[1]
         }
         
-## Laureate by country [/laureate/country/{country_code}]
+## Laureate by country [/api/laureate/country/{country_code}]
         
 ### List Laureates By Country [GET]
 
@@ -144,7 +144,7 @@ nobelprize is an api to get various information about nobel prizes, their laurea
         
 #group Countries
 
-## Country collection [/country]
+## Country collection [/api/country]
 
 ### List All Countries [GET]
 
@@ -162,7 +162,7 @@ nobelprize is an api to get various information about nobel prizes, their laurea
         ]
 
 
-## Country by code [/country/{country_code}]
+## Country by code [/api/country/{country_code}]
         
 ### Get Country By Country Code [GET]
 
