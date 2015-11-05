@@ -17,14 +17,10 @@
   border-top: 2px solid #ffffff;
 }
 
-.pullDown-left
+.img-margins
 {
-  border-left: 1px dashed #ffffff;
-}
-
-.pullDown-right
-{
-  border-right: 1px dashed #ffffff;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .center-content
@@ -32,12 +28,14 @@
   text-align: center;
 }
 
-p
+.inline-header
+{
+  display: inline;
+}
+
+p h2 h3
 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-li
-{
-  color:#ffffff;
-}
+
