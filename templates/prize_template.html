@@ -7,22 +7,23 @@
 {{super()}}
 <body style="background-color:#eeeeee">
   <div class="jumbotron">
-    <div class="container">
+    <div class="container center-content">
       <h1>{{entry['category']}}</h1>
-      <div class="well well-sm">
-        <h2>Year: {{entry['year']}} <br>
-            Number of Laureate: {{entry['numLaureate']}} <br>
-            Laureate:
-            {% for v in entry['laureate'][:-1] %}
-              <a href={{entry['laureateUrl'][loop.index0]}}> {{v}} </a>,
-            {% endfor %}
+       {% block content %}
+          <img class="img-thumbnail img-margins" src={{imageUrl}} height={{height}} width={{width}}>
+       {% endblock %}
+        <div class="well well-sm">
+          <h2 class="inline-header"><b>Year:</b></h2><h3 class="inline-header"> {{entry['year']}} </h3><br>
+          <h2 class="inline-header"><b>Number of Laureate:</b></h2><h3 class="inline-header"> {{entry['numLaureate']}} </h3><br>
+          <h2 class="inline-header"><b>Laureate:</b></h2>
+          <h3 class="inline-header">
+              {% for v in entry['laureate'][:-1] %}
+                <a href={{entry['laureateUrl'][loop.index0]}}> {{v}} </a>,
+              {% endfor %}
             <a href={{entry['laureateUrl'][-1]}}> {{entry['laureate'][-1]}} </a> 
-        </h2>
-        <p class="lead">Motivation: {{entry['motivation']}}</p>
+          </h3><br>
+          <h2 class="inline-header"><b>Motivation:</b></h2><h3 class="inline-header"> {{entry['motivation']}}</h3><br>
       </div>
-      {% block content %}
-          <img src={{imageUrl}} height={{height}} width={{width}}>
-      {% endblock %}
     </div>
   </div>
 </body>

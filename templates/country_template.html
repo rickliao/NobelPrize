@@ -7,19 +7,17 @@
 {{super()}}
 <body style="background-color:#eeeeee">
   <div class="jumbotron">
-    <div class="container">
+    <div class="container center-content">
       <h1>{{entry['name']}}</h1>
-      <div class="well well-sm">
-        <h2>
-            Country Code: {{entry['code']}} <br>
-            Population: {{entry['pop']}} <br>
-            Number of Laureate: {{entry['numLaureates']}} <br>
-            Number of Prizes: {{entry['numPrizes']}} <br>
-        </h2>
-      </div>
       {% block content %}
-          <img src={{imageUrl}} height={{height}} width={{width}}>
+          <img class="img-thumbnail img-margins" src={{imageUrl}} height={{height}} width={{width}}>
       {% endblock %}
+      <div class="well well-sm">
+        <h2 class="inline-header"><b>Country Code:</b></h2><h3 class="inline-header"> {{entry['code']}}</h3> <br>
+        <h2 class="inline-header"><b>Population:</b></h2><h3 class="inline-header"> {{entry['pop']}}</h3> <br>
+        <h2 class="inline-header"><b>Number of Laureate:</b></h2><h3 class="inline-header"> {{entry['numLaureates']}}</h3> <br>
+        <h2 class="inline-header"><b>Number of Prizes:</b></h2><h3 class="inline-header"> {{entry['numPrizes']}}</h3> <br>
+      </div>
     </div>
   </div>
 </body>

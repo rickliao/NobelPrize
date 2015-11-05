@@ -65,7 +65,7 @@ def render_individual_prize(myYear, myCategory):
     for laureate in laureates:
         laureateNames += [laureate.name]
         laureateUrls += [laureate.url]
-    entry = {'year':prize.year, 'category':prize.category, 'motivation':prize.motivation, 'numLaureate':len(laureateNames), 'laureate':laureateNames, 'laureateUrl':laureateUrls}
+    entry = {'year':prize.year, 'category':prize.category.capitalize(), 'motivation':prize.motivation, 'numLaureate':len(laureateNames), 'laureate':laureateNames, 'laureateUrl':laureateUrls}
 
     # embed image
     search = "nobel prize "+str(prize.year)+" "+prize.category

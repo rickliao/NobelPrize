@@ -7,30 +7,27 @@
 {{super()}}
 <body style="background-color:#eeeeee">
   <div class="jumbotron">
-    <div class="container">
+    <div class="container center-content">
       <h1>{{entry['name']}}</h1> 
-      <div class="well well-sm">
-        <h2>
-        Year: {{entry['year']}} <br> 
-        Number of Prizes: {{entry['numPrizes']}} <br>
-        Prizes: 
-        {% for prize in entry['prizes'][:-1] %}
-          <a href={{entry['prizesUrl'][loop.index0]}}> {{prize}} </a>,
-        {% endfor%} 
-        <a href={{entry['prizesUrl'][-1]}}> {{entry['prizes'][-1]}} </a> <br>
-        Gender: {{entry['gender']}} <br>
-        Date of Birth: {{entry['dob']}} <br>
-        {% if entry['countryUrl'] != "/error" %}
-            Country: <a href={{entry['countryUrl']}}> {{entry['country']}} </a>
-        {% else %}
-            Country: {{entry['country']}}
-        {% endif %}
-        </h2>
-      </div>
       {% block content %}
-          <img src={{imageUrl}} height={{height}} width={{width}}>
+        <img class="img-thumbnail img-margins" src={{imageUrl}} height={{height}} width={{width}}>
       {% endblock %}
-      
+      <div class="well well-sm">
+        <h2 class="inline-header"><b>Year:</b></h2><h3 class="inline-header"> {{entry['year']}} </h3><br> 
+        <h2 class="inline-header"><b>Number of Prizes:</b></h2><h3 class="inline-header"> {{entry['numPrizes']}} </h3><br>
+        <h2 class="inline-header"><b>Prizes:</b></h2> 
+        {% for prize in entry['prizes'][:-1] %}
+          <a href={{entry['prizesUrl'][loop.index0]}}><h3 class="inline-header"> {{prize}} </h3></a>,
+        {% endfor%} 
+        <a href={{entry['prizesUrl'][-1]}}><h3 class="inline-header"> {{entry['prizes'][-1]}} </h3></a> <br>
+        <h2 class="inline-header"><b>Gender:</b></h2><h3 class="inline-header"> {{entry['gender']}}</h3> <br>
+        <h2 class="inline-header"><b>Date of Birth:</b></h2><h3 class="inline-header"> {{entry['dob']}}</h3> <br>
+        {% if entry['countryUrl'] != "/error" %}
+            <h2 class="inline-header"><b>Country:</b></h2><a href={{entry['countryUrl']}}><h3 class="inline-header"> {{entry['country']}} </h3></a>
+        {% else %}
+            <h2 class="inline-header"><b>Country:</b></h2><h3 class="inline-header">{{entry['country']}}</h3>
+        {% endif %}
+      </div>      
     </div>
   </div>
 </body>
