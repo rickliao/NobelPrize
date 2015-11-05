@@ -42,13 +42,14 @@ nobelprize is an api to get various information about nobel prizes, their laurea
             "motivation: "\"for the discovery of neutrino oscillations, which shows that neutrinos have mass\""
         }
         
-## Prize by year [/api/prize/year/{year}]
 
-### List Prizes By Year [GET]
+## Prize by filter [/api/prize?q={filter}]
+
+### Get Prize(s) By filter [GET]
 
 + Parameters
-    + year (required, number, `2015`) ... Int `year` of the year interested
-    
+    + filter (required, json, `{"filters":[{"name":"year","op":"==","val":2015}]}`) ... A json `filter`
+
 + Response 200 (application/json)
 
         [
@@ -59,26 +60,6 @@ nobelprize is an api to get various information about nobel prizes, their laurea
                 "nr_laureates": 2,
                 "laureates": [919,920],
                 "motivation: "\"for the discovery of neutrino oscillations, which shows that neutrinos have mass\""
-            }, ...
-        ]
-    
-## Prize by category [/api/prize/category/{category}]
-
-### List Prizes By Category [GET]
-
-+ Parameters
-    + category (required, string, `literature`) ... String `category` of the category of the Nobel Prize interested
-
-+ Response 200 (application/json)
-
-        [
-            {
-                "id": 2
-                "year": "2015",
-                "category": "literature",
-                "nr_laureates": 1,
-                "laureates": [924],
-                "motivation: "\"for her polyphonic writings, a monument to suffering and courage in our time\""
             }, ...
         ]
 
