@@ -307,3 +307,38 @@ nobelprize is an api to get various information about nobel prizes, their laurea
             "population":35749600,
             "laureate":[920, ...]
         }
+        
+## Country by filter [/api/country?q={filter}]
+        
+### List Country By filter [GET]
+
++ Parameters
+    + filter (required, json, `{"filters":[{"name":"name","op":"==","val":"bulgaria"}]}`) ... A json filter. "name" can be replaced by any other attribute of country. "==" can be replaced with other operations like "<" or "!=". "bulgaria" can be replaced by another name in interest.
+
++ Response 200 (application/json)
+
+        {
+          "num_results": 1,
+          "objects": [
+            {
+              "country_code": "BG",
+              "laureates": [
+                {
+                  "country_id": "BG",
+                  "date_of_birth": "1905-07-25",
+                  "gender": "male",
+                  "id": 382,
+                  "name": "Elias Canetti",
+                  "nr_prizes": 1,
+                  "url": "/laureates/Elias_Canetti"
+                }
+              ],
+              "name": "Bulgaria",
+              "nr_laureates": 1,
+              "nr_prizes": 1,
+              "population": 7202198
+            }
+          ],
+          "page": 1,
+          "total_pages": 1
+        }
