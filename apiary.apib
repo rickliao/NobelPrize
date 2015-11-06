@@ -13,16 +13,26 @@ nobelprize is an api to get various information about nobel prizes, their laurea
 
 + Response 200 (application/json)
 
-        [
+        {
+          "num_results": 573,
+          "objects": [
             {
-                "id": 1
-                "year": "2015",
-                "category": "physics",
-                "nr_laureates": 2,
-                "laureates": [919,920],
-                "motivation: "\"for the discovery of neutrino oscillations, which shows that neutrinos have mass\""
+              "category": "physics",
+              "id": 1,
+              "laureates": [
+                {
+                  "country_id": "JP",
+                  "date_of_birth": "0000-00-00",
+                  "gender": "male",
+                  "id": 1,
+                  "name": "Takaaki Kajita",
+                  "nr_prizes": 1,
+                  "url": "/laureates/Takaaki_Kajita"
+                }, ...
+              ]
             }, ...
-        ]
+          ]
+        }
         
 ## Prize by id [/api/prize/{id}]
 
@@ -34,53 +44,62 @@ nobelprize is an api to get various information about nobel prizes, their laurea
 + Response 200 (application/json)
 
         {
-            "id": 1
-            "year": "2015",
-            "category": "physics",
-            "nr_laureates": 2,
-            "laureates": [919,920],
-            "motivation: "\"for the discovery of neutrino oscillations, which shows that neutrinos have mass\""
+          "category": "physics",
+          "id": 1,
+          "laureates": [
+            {
+              "country_id": "JP",
+              "date_of_birth": "0000-00-00",
+              "gender": "male",
+              "id": 1,
+              "name": "Takaaki Kajita",
+              "nr_prizes": 1,
+              "url": "/laureates/Takaaki_Kajita"
+            },
+            {
+              "country_id": "CA",
+              "date_of_birth": "0000-00-00",
+              "gender": "male",
+              "id": 2,
+              "name": "Arthur B. McDonald",
+              "nr_prizes": 1,
+              "url": "/laureates/Arthur_B._McDonald"
+            }
+          ],
+          "nr_laureates": 2,
+          "year": 2015
         }
         
-## Prize by year [/api/prize/year/{year}]
+## Prize by filter [/api/prize?q={filter}]
 
-### List Prizes By Year [GET]
+### List Prizes By filter [GET]
 
 + Parameters
-    + year (required, number, `2015`) ... Int `year` of the year interested
+    + filter (required, json, `{"filters":[{"name":"year","op":"==","val":2015}]}`) ... A json filter. "year" can be replaced by any other attribute of prize. "==" can be replaced with other operations like "<" or "!=". 2015 can be replaced by another year in interest. 
     
 + Response 200 (application/json)
 
-        [
+        
+        {
+          "num_results": 6,
+          "objects": [
             {
-                "id": 1
-                "year": "2015",
-                "category": "physics",
-                "nr_laureates": 2,
-                "laureates": [919,920],
-                "motivation: "\"for the discovery of neutrino oscillations, which shows that neutrinos have mass\""
+              "category": "physics",
+              "id": 1,
+              "laureates": [
+                {
+                  "country_id": "JP",
+                  "date_of_birth": "0000-00-00",
+                  "gender": "male",
+                  "id": 1,
+                  "name": "Takaaki Kajita",
+                  "nr_prizes": 1,
+                  "url": "/laureates/Takaaki_Kajita"
+                }, ...
+              ]
             }, ...
-        ]
-    
-## Prize by category [/api/prize/category/{category}]
-
-### List Prizes By Category [GET]
-
-+ Parameters
-    + category (required, string, `literature`) ... String `category` of the category of the Nobel Prize interested
-
-+ Response 200 (application/json)
-
-        [
-            {
-                "id": 2
-                "year": "2015",
-                "category": "literature",
-                "nr_laureates": 1,
-                "laureates": [924],
-                "motivation: "\"for her polyphonic writings, a monument to suffering and courage in our time\""
-            }, ...
-        ]
+          ]
+        }
 
 #group Laureates
 
@@ -90,57 +109,62 @@ nobelprize is an api to get various information about nobel prizes, their laurea
 
 + Response 200 (application/json)
 
-        [
+        {
+          "num_results": 895,
+          "objects": [
             {
-                "id": 920,
-                "name": "Arthur B. McDonald",
-                "nr_prizes": 1,
-                "date_of_birth":"08-29-1943",
-                "gender":"male",
-                "country_code":"CA",
-                "prize":[1]
+              "country_id": "JP",
+              "date_of_birth": "0000-00-00",
+              "gender": "male",
+              "id": 1,
+              "name": "Takaaki Kajita",
+              "nr_prizes": 1
             }, ...
-        ]
+          ]
+        }
         
 ## Laureate by id [/api/laureate/{id}]
 
 ### Get Laureate By ID [GET]
 
 + Parameters
-    + id (required, number, `920`) ... Int `id` of the laureate associated with id
+    + id (required, number, `1`) ... Int `id` of the laureate associated with id
    
 + Response 200 (application/json)
 
         {
-            "id": 920,
-            "name": "Arthur B. McDonald",
-            "nr_prizes": 1,
-            "date_of_birth":"08-29-1943",
-            "gender":"male",
-            "country_code":"CA",
-            "prize":[1]
+          "country_id": "JP",
+          "date_of_birth": "0000-00-00",
+          "gender": "male",
+          "id": 1,
+          "name": "Takaaki Kajita",
+          "nr_prizes": 1
         }
         
-## Laureate by country [/api/laureate/country/{country_code}]
+## Laureate by filter [/api/laureate?q={filter}]
         
-### List Laureates By Country [GET]
+### List Laureates By filter [GET]
 
 + Parameters
-    + country_code (required, number, `CA`) ... String `country_code` of a country in interest
+    + filter (required, json, `{"filters":[{"name":"name","op":"==","val":"Arthur B. McDonald"}]}`) ... A json filter. "name" can be replaced by any other attribute of laureate. "==" can be replaced with other operations like "<" or "!=". "Arthur B. McDonald" can be replaced by another name in interest.
 
 + Response 200 (application/json)
 
-        [
+        {
+          "num_results": 1,
+          "objects": [
             {
-                "id": 920,
-                "name": "Arthur B. McDonald",
-                "nr_prizes": 1,
-                "date_of_birth":"08-29-1943",
-                "gender":"male",
-                "country_code":"CA",
-                "prize":[1]
-            }, ...
-        ]
+              "country_id": "CA",
+              "date_of_birth": "0000-00-00",
+              "gender": "male",
+              "id": 2,
+              "name": "Arthur B. McDonald",
+              "nr_prizes": 1
+            }
+          ],
+          "page": 1,
+          "total_pages": 1
+        }
         
 #group Countries
 
@@ -150,16 +174,25 @@ nobelprize is an api to get various information about nobel prizes, their laurea
 
 + Response 200 (application/json)
 
-        [
+        {
+          "num_results": 76,
+          "objects": [
             {
-                "country_code": "CA",
-                "name": "Canada",
-                "nr_prizes": 24,
-                "nr_laureates":24,
-                "population":35749600,
-                "laureate":[920, ...]
+              "country_code": "AR",
+              "laureates": [
+                {
+                  "country_id": "AR",
+                  "date_of_birth": "1927-10-08",
+                  "gender": "male",
+                  "id": 354,
+                  "name": "César Milstein",
+                  "nr_prizes": 1,
+                  "url": "/laureates/César_Milstein"
+                }, ...
+              ]
             }, ...
-        ]
+          ]
+        }
 
 
 ## Country by code [/api/country/{country_code}]
@@ -171,11 +204,53 @@ nobelprize is an api to get various information about nobel prizes, their laurea
     
 + Response 200 (application/json)
 
+        
         {
-            "country_code": "CA",
-            "name": "Canada",
-            "nr_prizes": 24,
-            "nr_laureates":24,
-            "population":35749600,
-            "laureate":[920, ...]
+          "country_code": "CA",
+          "laureates": [
+            {
+              "country_id": "CA",
+              "date_of_birth": "0000-00-00",
+              "gender": "male",
+              "id": 2,
+              "name": "Arthur B. McDonald",
+              "nr_prizes": 1,
+              "url": "/laureates/Arthur_B._McDonald"
+            }, ...
+           ]
+        }
+        
+## Country by filter [/api/country?q={filter}]
+        
+### List Country By filter [GET]
+
++ Parameters
+    + filter (required, json, `{"filters":[{"name":"name","op":"==","val":"bulgaria"}]}`) ... A json filter. "name" can be replaced by any other attribute of country. "==" can be replaced with other operations like "<" or "!=". "bulgaria" can be replaced by another name in interest.
+
++ Response 200 (application/json)
+
+        {
+          "num_results": 1,
+          "objects": [
+            {
+              "country_code": "BG",
+              "laureates": [
+                {
+                  "country_id": "BG",
+                  "date_of_birth": "1905-07-25",
+                  "gender": "male",
+                  "id": 382,
+                  "name": "Elias Canetti",
+                  "nr_prizes": 1,
+                  "url": "/laureates/Elias_Canetti"
+                }
+              ],
+              "name": "Bulgaria",
+              "nr_laureates": 1,
+              "nr_prizes": 1,
+              "population": 7202198
+            }
+          ],
+          "page": 1,
+          "total_pages": 1
         }
