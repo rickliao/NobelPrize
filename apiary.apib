@@ -205,26 +205,6 @@ nobelprize is an api to get various information about nobel prizes, their laurea
           "page": 1,
           "total_pages": 1
         }
-    
-## Prize by category [/api/prize/category/{category}]
-
-### List Prizes By Category [GET]
-
-+ Parameters
-    + category (required, string, `literature`) ... String `category` of the category of the Nobel Prize interested
-
-+ Response 200 (application/json)
-
-        [
-            {
-                "id": 2
-                "year": "2015",
-                "category": "literature",
-                "nr_laureates": 1,
-                "laureates": [924],
-                "motivation: "\"for her polyphonic writings, a monument to suffering and courage in our time\""
-            }, ...
-        ]
 
 #group Laureates
 
@@ -265,26 +245,30 @@ nobelprize is an api to get various information about nobel prizes, their laurea
             "prize":[1]
         }
         
-## Laureate by country [/api/laureate/country/{country_code}]
+## Laureate by filter [/api/laureate?q={filter}]
         
-### List Laureates By Country [GET]
+### List Laureates By filter [GET]
 
 + Parameters
-    + country_code (required, number, `CA`) ... String `country_code` of a country in interest
+    + filter (required, json, `{"filters":[{"name":"name","op":"==","val":"Arthur B. McDonald"}]}`) ... A json filter. "name" can be replaced by any other attribute of laureate. "==" can be replaced with other operations like "<" or "!=". "Arthur B. McDonald" can be replaced by another name in interest.
 
 + Response 200 (application/json)
 
-        [
+        {
+          "num_results": 1,
+          "objects": [
             {
-                "id": 920,
-                "name": "Arthur B. McDonald",
-                "nr_prizes": 1,
-                "date_of_birth":"08-29-1943",
-                "gender":"male",
-                "country_code":"CA",
-                "prize":[1]
-            }, ...
-        ]
+              "country_id": "CA",
+              "date_of_birth": "0000-00-00",
+              "gender": "male",
+              "id": 2,
+              "name": "Arthur B. McDonald",
+              "nr_prizes": 1
+            }
+          ],
+          "page": 1,
+          "total_pages": 1
+        }
         
 #group Countries
 
