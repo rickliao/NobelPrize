@@ -42,24 +42,187 @@ nobelprize is an api to get various information about nobel prizes, their laurea
             "motivation: "\"for the discovery of neutrino oscillations, which shows that neutrinos have mass\""
         }
         
-
 ## Prize by filter [/api/prize?q={filter}]
 
-### Get Prize(s) By filter [GET]
+### List Prizes By filter [GET]
 
 + Parameters
-    + filter (required, json, `{"filters":[{"name":"year","op":"==","val":2015}]}`) ... A json `filter`
+    + filter (required, json, `{"filters":[{"name":"year","op":"==","val":2015}]}`) ... A json filter. "year" can be replaced by any other attribute of prize. "==" can be replaced with other operations like "<" or "!=". 2015 can be replaced by another year in interest. 
+    
++ Response 200 (application/json)
+
+        {
+            "num_results": 6,
+            "objects": [
+                {
+                    "category": "physics",
+              "id": 1,
+              "laureates": [
+                {
+                  "country_id": "JP",
+                  "date_of_birth": "0000-00-00",
+                  "gender": "male",
+                  "id": 1,
+                  "name": "Takaaki Kajita",
+                  "nr_prizes": 1,
+                  "url": "/laureates/Takaaki_Kajita"
+                },
+                {
+                  "country_id": "CA",
+                  "date_of_birth": "0000-00-00",
+                  "gender": "male",
+                  "id": 2,
+                  "name": "Arthur B. McDonald",
+                  "nr_prizes": 1,
+                  "url": "/laureates/Arthur_B._McDonald"
+                }
+              ],
+              "nr_laureates": 2,
+              "year": 2015
+            },
+            {
+              "category": "chemistry",
+              "id": 2,
+              "laureates": [
+                {
+                  "country_id": "SE",
+                  "date_of_birth": "0000-00-00",
+                  "gender": "male",
+                  "id": 3,
+                  "name": "Tomas Lindahl",
+                  "nr_prizes": 1,
+                  "url": "/laureates/Tomas_Lindahl"
+                },
+                {
+                  "country_id": null,
+                  "date_of_birth": "0000-00-00",
+                  "gender": "male",
+                  "id": 4,
+                  "name": "Paul Modrich",
+                  "nr_prizes": 1,
+                  "url": "/laureates/Paul_Modrich"
+                },
+                {
+                  "country_id": "TR",
+                  "date_of_birth": "0000-00-00",
+                  "gender": "male",
+                  "id": 5,
+                  "name": "Aziz Sancar",
+                  "nr_prizes": 1,
+                  "url": "/laureates/Aziz_Sancar"
+                }
+              ],
+              "nr_laureates": 3,
+              "year": 2015
+            },
+            {
+              "category": "medicine",
+              "id": 3,
+              "laureates": [
+                {
+                  "country_id": "IE",
+                  "date_of_birth": "0000-00-00",
+                  "gender": "male",
+                  "id": 6,
+                  "name": "William C. Campbell",
+                  "nr_prizes": 1,
+                  "url": "/laureates/William_C._Campbell"
+                },
+                {
+                  "country_id": "JP",
+                  "date_of_birth": "0000-00-00",
+                  "gender": "male",
+                  "id": 7,
+                  "name": "Satoshi Omura",
+                  "nr_prizes": 1,
+                  "url": "/laureates/Satoshi_Omura"
+                },
+                {
+                  "country_id": "CN",
+                  "date_of_birth": "0000-00-00",
+                  "gender": "female",
+                  "id": 8,
+                  "name": "Youyou Tu",
+                  "nr_prizes": 1,
+                  "url": "/laureates/Youyou_Tu"
+                }
+              ],
+              "nr_laureates": 3,
+              "year": 2015
+            },
+            {
+              "category": "literature",
+              "id": 4,
+              "laureates": [
+                {
+                  "country_id": "UA",
+                  "date_of_birth": "1948-05-31",
+                  "gender": "female",
+                  "id": 9,
+                  "name": "Svetlana Alexievich",
+                  "nr_prizes": 1,
+                  "url": "/laureates/Svetlana_Alexievich"
+                }
+              ],
+              "nr_laureates": 1,
+              "year": 2015
+            },
+            {
+              "category": "peace",
+              "id": 5,
+              "laureates": [
+                {
+                  "country_id": null,
+                  "date_of_birth": "0000-00-00",
+                  "gender": "org",
+                  "id": 10,
+                  "name": "National Dialogue Quartet",
+                  "nr_prizes": 1,
+                  "url": "/laureates/National_Dialogue_Quartet"
+                }
+              ],
+              "nr_laureates": 1,
+              "year": 2015
+            },
+            {
+              "category": "economics",
+              "id": 6,
+              "laureates": [
+                {
+                  "country_id": "GB",
+                  "date_of_birth": "0000-00-00",
+                  "gender": "male",
+                  "id": 11,
+                  "name": "Angus Deaton",
+                  "nr_prizes": 1,
+                  "url": "/laureates/Angus_Deaton"
+                }
+              ],
+              "nr_laureates": 1,
+              "year": 2015
+            }
+          ],
+          "page": 1,
+          "total_pages": 1
+        }
+    
+## Prize by category [/api/prize/category/{category}]
+
+### List Prizes By Category [GET]
+
++ Parameters
+    + category (required, string, `literature`) ... String `category` of the category of the Nobel Prize interested
 
 + Response 200 (application/json)
 
         [
             {
-                "id": 1
+                "id": 2
                 "year": "2015",
-                "category": "physics",
-                "nr_laureates": 2,
-                "laureates": [919,920],
-                "motivation: "\"for the discovery of neutrino oscillations, which shows that neutrinos have mass\""
+                "category": "literature",
+                "nr_laureates": 1,
+                "laureates": [924],
+                "motivation: "\"for her polyphonic writings, a monument to suffering and courage in our time\""
             }, ...
         ]
 
