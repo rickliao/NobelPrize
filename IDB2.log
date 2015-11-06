@@ -1,3 +1,39 @@
+commit 653a08bf5ab00c78b4d1d0f027eb764a4551f358
+Author: User <rickliao>
+Date:   Thu Nov 5 04:45:44 2015 +0000
+
+    deleted old files
+
+commit a66461799acf397ba5583e71e3d08fde05c24f62
+Author: User <rickliao>
+Date:   Thu Nov 5 04:41:45 2015 +0000
+
+    one more for styling
+
+commit 7564426da9a15ef7e65dfdd8981b2baecebe3bf9
+Author: User <rickliao>
+Date:   Thu Nov 5 04:41:12 2015 +0000
+
+    stylings
+
+commit 81c9d3e2e5ede7ae85ed48900ae8db09c903384e
+Author: User <rickliao>
+Date:   Wed Nov 4 04:23:23 2015 +0000
+
+    Changed navbar format and added some interactability.
+
+commit 5d232ea852fb204102c9e843630ef009d4be2d42
+Author: User <rickliao>
+Date:   Wed Nov 4 04:17:56 2015 +0000
+
+    add 404 to country if query fails
+
+commit e4b6721dc089c9ba7925ab68ba36cf83536fca50
+Author: User <rickliao>
+Date:   Wed Nov 4 03:14:24 2015 +0000
+
+    changed log number
+
 commit eea828ade1f2c51b482bd7456a49364cffce865c
 Author: User <rickliao>
 Date:   Wed Nov 4 02:50:50 2015 +0000

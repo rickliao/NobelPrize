@@ -144,6 +144,7 @@ def test_link():
     result = []
     for line in f:
         result += [line]
+    f.close()
     os.system("make clean")    
     return render_template('aboutT.html', result=result);
 

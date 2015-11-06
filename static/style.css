@@ -17,6 +17,12 @@
   border-top: 2px solid #ffffff;
 }
 
+.img-background
+{
+  background-image: url("/static/Block-Background.jpg");
+  color: #ffffff;
+}
+
 .img-margins
 {
   margin-top: 40px;
