@@ -115,3 +115,5 @@ for country in countries:
     searchString += " Number of Prizes: " + str(country.nr_prizes) + " "
 
     country.search_text = searchString
+
+db.session.commit()

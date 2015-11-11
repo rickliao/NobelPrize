@@ -20,8 +20,9 @@ class Prize(db.Model) :
     category = db.Column(db.String(80))
     year = db.Column(db.Integer)
     nr_laureates = db.Column(db.Integer)
-    motivation = db.Column(db.String(250))
-    url = db.Column(db.String(90))
+    motivation = db.Column(db.String(300))
+    url = db.Column(db.String(200))
+    search_text = db.Column(db.String(500))
     
     #Many to many relationship
     laureates = db.relationship('Laureate', secondary=laureates,
@@ -46,11 +47,12 @@ Each instance of this class is a row
 """
 class Laureate(db.Model) :
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80))
+    name = db.Column(db.String(100))
     nr_prizes = db.Column(db.Integer)
     date_of_birth = db.Column(db.String(10))
     gender = db.Column(db.String(10))
-    url = db.Column(db.String(90))
+    url = db.Column(db.String(200))
+    search_text = db.Column(db.String(500))
     
     #One to many relationship
     country_id = db.Column(db.String(2), db.ForeignKey('country.country_code'))
@@ -78,7 +80,8 @@ class Country(db.Model) :
     nr_laureates = db.Column(db.Integer)
     nr_prizes = db.Column(db.Integer)
     population = db.Column(db.Integer)
-    url = db.Column(db.String(90))
+    url = db.Column(db.String(200))
+    search_text = db.Column(db.String(500))
     
     #One to many relationship
     laureates = db.relationship('Laureate', backref='country', lazy='select')
