@@ -6,7 +6,7 @@ import requests
 import json
 from urllib.parse import quote
 import os
-from search_db import searchTermAnd
+from search_db import searchTermAnd, searchTermOr
 
 manager = APIManager(app, flask_sqlalchemy_db=db)
 manager.create_api(Prize, methods=['GET'], include_columns=['id', 'category', 'laureates', 'year', 'nr_laureates'])
@@ -151,8 +151,13 @@ def test_link():
 
 @app.route("/search/<query>")
 def render_search(query):
-    links, titles, contexts = searchTermAnd(query)
-    return render_template("search_single.html", term = query, titles = titles, links = links, contexts = contexts)
+    if " " not in query:
+        links, titles, contexts = searchTermAnd(query)
+        return render_template("search_single.html", term = query, titles = titles, links = links, contexts = contexts)
+
+    linksAnd, titlesAnd, contextsAnd = searchTermAnd(query)
+    linksOr, titlesOr, contextsOr = searchTermOr(query)
+    return render_template("search_multiple.html", term = query, titlesAnd = titlesAnd, linksAnd = linksAnd, contextsAnd = contextsAnd, titlesOr = titlesOr, linksOr = linksOr, contextsOr = contextsOr)
 
 @app.errorhandler(404)
 def error_404(error):
