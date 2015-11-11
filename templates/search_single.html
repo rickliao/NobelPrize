@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "navbar.html" %}
+{% block title %}
+  search: {{term}}
+{% endblock %}
+{% block body %}
+{{super()}}
+<body class="img-background">
+  <div class="jumbotron" style="background-color:transparent">
+    <div class="container center-content">
+      <h1>Search: {{term}}</h1>
+      <h2>Results: </h2>
+      {% for titleName in titles %}
+          <h3><a href={{links[loop.index0]}}> {{titleName}} </a></h3>
+          <div class="well well-sm img-background">
+              <p>{{contexts[loop.index0]}}</p>
+          </div>
+      {% endfor %}      
+    </div>
+  </div>
+</body>
+{% endblock %}
