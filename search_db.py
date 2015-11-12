@@ -62,10 +62,27 @@ def findContexts(terms, searchString):
             max = i+len(query)
     
     context = searchString[min:max]
-    words = re.compile("([^ ]*)( ?)([^ ]*)"+context+"([^ ]*)( ?)([^ ]*)", re.IGNORECASE)
-    match = words.search(searchString)    
+    words = re.compile("([^ ]*)( ?)([^ ]*)"+re.escape(context)+"([^ ]*)( ?)([^ ]*)", re.IGNORECASE)
+    match = words.search(searchString)
+    complete = "..."+match.group(0)+"..."
+    for query in terms:
+        noCaseQuery = re.compile(re.escape(query), re.IGNORECASE)
+        complete = noCaseQuery.sub("~"+query+"~", complete)
 
-    return "..."+match.group(0)+"..."
+    # split phrases to highlight later
+    listOfWords = []
+    beg = complete.index("~")
+    while 1:
+        listOfWords += [complete[0:beg]]
+        end = complete.index("~", beg+1)
+        listOfWords += [complete[beg+1:end]]
+        complete = complete[end+1:]
+        try:
+            beg = complete.index("~")
+        except ValueError:
+            listOfWords += [complete]
+            break
+    return listOfWords
 
 def searchTermOr(term):
     links = []

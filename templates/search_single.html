@@ -11,9 +11,18 @@
       <h1>Search: {{term}}</h1>
       <h2>Results: </h2>
       {% for titleName in titles %}
+          {% set outer_loop = loop %}
           <h3><a href={{links[loop.index0]}}> {{titleName}} </a></h3>
           <div class="well well-sm img-background">
-              <p>{{contexts[loop.index0]}}</p>
+              <p>
+                {% for phrase in contexts[outer_loop.index0] %}
+                    {% if loop.index0 % 2 == 0 %}
+                      {{phrase}}
+                    {% else %}
+                        <mark>{{phrase}}</mark>
+                    {% endif %}
+                {% endfor %}
+              </p>
           </div>
       {% endfor %}      
     </div>

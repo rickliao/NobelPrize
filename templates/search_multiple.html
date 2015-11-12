@@ -11,17 +11,35 @@
       <h1>Search: {{term}}</h1>
       <h2>AND Result: </h2>
       {% for titleName in titlesAnd %}
+          {% set outer_loop = loop %}
           <h3><a href={{linksAnd[loop.index0]}}> {{titleName}} </a></h3>
           <div class="well well-sm img-background">
-              <p>{{contextsAnd[loop.index0]}}</p>
+              <p>
+                {% for phrase in contextsAnd[outer_loop.index0] %}                 
+                    {% if loop.index0 % 2 == 0 %}
+                      {{phrase}}
+                    {% else %}
+                        <mark>{{phrase}}</mark>
+                    {% endif %}
+                {% endfor %}             
+              </p>
           </div>
       {% endfor %}
       
       <h2>OR Result: </h2>
       {% for titleName in titlesOr %}
+          {% set outer_loop = loop %}
           <h3><a href={{linksOr[loop.index0]}}> {{titleName}} </a></h3>
           <div class="well well-sm img-background">
-              <p>{{contextsOr[loop.index0]}}</p>
+              <p>
+                {% for phrase in contextsOr[outer_loop.index0] %}                 
+                    {% if loop.index0 % 2 == 0 %}
+                      {{phrase}}
+                    {% else %}
+                        <mark>{{phrase}}</mark>
+                    {% endif %}
+                {% endfor %}             
+              </p>
           </div>
       {% endfor %}      
     </div>
