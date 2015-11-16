@@ -1,3 +1,94 @@
+commit 7e207e3a0464c5ba52f4dbc775e34e83545c0346
+Author: Rick <rickliao@utexas.edu>
+Date:   Thu Nov 12 22:56:37 2015 +0000
+
+    finished search contexualize
+
+commit 7d6865c97b17dab32ea9d32bdaf32b04e57223c9
+Author: Rick <rickliao@utexas.edu>
+Date:   Thu Nov 12 04:43:04 2015 +0000
+
+    search finished except highlight
+
+commit 831206819304e892a7c8e75113af0bcf6e57f107
+Author: Rick <rickliao@utexas.edu>
+Date:   Wed Nov 11 21:47:31 2015 +0000
+
+    added or
+
+commit 53aead49ddb794ccd49ef8c53fec1a735aa51d74
+Author: Rick <rickliao@utexas.edu>
+Date:   Wed Nov 11 07:56:24 2015 +0000
+
+    query for database for search_text
+
+commit 040ca03fc757da225bf58577af990dbfa01f7bfd
+Author: Rick <rickliao@utexas.edu>
+Date:   Wed Nov 11 07:47:36 2015 +0000
+
+    reload database
+
+commit 99b8a6489105dc11d4f4ed009ad7bd328e1eac55
+Author: Rick <rickliao@utexas.edu>
+Date:   Wed Nov 11 07:01:33 2015 +0000
+
+    search with and
+
+commit 2ad38307d89850f9f467d1d6d4e46fe5a8707c1b
+Author: Rick <rickliao@utexas.edu>
+Date:   Wed Nov 11 04:18:47 2015 +0000
+
+    added search_text in db
+
+commit 27a1cefa824c369cc9afabfaec9cb3d6a87dba04
+Author: User <rickliao>
+Date:   Wed Nov 11 03:17:43 2015 +0000
+
+    started search
+
+commit 8939ea39f1112d39410c884d1e2086c375e847da
+Merge: 8c1bfb2 caa086a
+Author: User <rickliao>
+Date:   Fri Nov 6 01:48:41 2015 +0000
+
+    Merge branch 'master' of https://github.com/rickliao/NobelPrize
+
+commit 8c1bfb27f0390acdff52e7c67f188e42518f8fee
+Author: User <rickliao>
+Date:   Fri Nov 6 01:48:37 2015 +0000
+
+    Added background, and updated log
+
+commit caa086a6dc8cec4bfa4ef97eb899e978305ac96a
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Thu Nov 5 19:01:08 2015 -0600
+
+    Transferring blueprint from apiary.io
+
+commit 17fab64257ba815c716e7bf0eddea24b5ab84811
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Thu Nov 5 18:32:36 2015 -0600
+
+    Transferring blueprint from apiary.io
+
+commit 40b3214884034985209083900b0331197c247c59
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Thu Nov 5 18:29:31 2015 -0600
+
+    Transferring blueprint from apiary.io
+
+commit c2d324cdf9b6decd25bf94b8b2b3304b267480e7
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Thu Nov 5 18:21:04 2015 -0600
+
+    Transferring blueprint from apiary.io
+
+commit 56be1fc98d2913f5ed1ade0ae8b98c53be5a7ae9
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Thu Nov 5 16:46:31 2015 -0600
+
+    Transferring blueprint from apiary.io
+
 commit 653a08bf5ab00c78b4d1d0f027eb764a4551f358
 Author: User <rickliao>
 Date:   Thu Nov 5 04:45:44 2015 +0000

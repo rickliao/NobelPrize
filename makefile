@@ -1,6 +1,6 @@
 FILES :=                       \
     model.html                 \
-    IDB2.log                   \
+    IDB3.log                   \
     models.py                  \
     tests.py                   \
     UML.pdf                    \
@@ -52,7 +52,7 @@ idb.html: models.py
 	pydoc3 -w models
 
 idb.log:
-	git log > IDB2.log
+	git log > IDB3.log
 
 TestModels.tmp: tests.py
 	coverage3 run --omit=app.py,*flask*,*sqlalchemy*,*dist-packages* --branch tests.py >  TestModels.tmp 2>&1
