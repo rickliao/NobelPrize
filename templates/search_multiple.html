@@ -5,41 +5,45 @@
 {% endblock %}
 {% block body %}
 {{super()}}
-<body class="img-background">
+<body style="background-image:url('/static/searchBackground.jpg');color:#ffffff;">
   <div class="jumbotron" style="background-color:transparent">
-    <div class="container center-content">
+    <div class="container-fluid center-content">
       <h1>Search: {{term}}</h1>
       <h2>AND Result: </h2>
       {% for titleName in titlesAnd %}
           {% set outer_loop = loop %}
-          <h3><a href={{linksAnd[loop.index0]}}> {{titleName}} </a></h3>
-          <div class="well well-sm img-background">
-              <p>
+          <div class="col-xs-12 col-s-6 col-md-3 center-content">
+            <div class="div-search-box">
+              <h3><a href={{linksAnd[loop.index0]}}> {{titleName}} </a></h3>
+              <p style="color:#000000;">
                 {% for phrase in contextsAnd[outer_loop.index0] %}                 
                     {% if loop.index0 % 2 == 0 %}
                       {{phrase}}
                     {% else %}
-                        <mark>{{phrase}}</mark>
+                        <mark class="finder">{{phrase}}</mark>
                     {% endif %}
                 {% endfor %}             
               </p>
+            </div>
           </div>
       {% endfor %}
       
       <h2>OR Result: </h2>
       {% for titleName in titlesOr %}
           {% set outer_loop = loop %}
-          <h3><a href={{linksOr[loop.index0]}}> {{titleName}} </a></h3>
-          <div class="well well-sm img-background">
-              <p>
+          <div class="col-xs-12 col-s-6 col-md-3 center-content">
+            <div class="div-search-box">
+             <h3><a href={{linksOr[loop.index0]}}> {{titleName}} </a></h3>
+              <p style="color:#000000;">
                 {% for phrase in contextsOr[outer_loop.index0] %}                 
                     {% if loop.index0 % 2 == 0 %}
                       {{phrase}}
                     {% else %}
-                        <mark>{{phrase}}</mark>
+                        <mark class="finder">{{phrase}}</mark>
                     {% endif %}
                 {% endfor %}             
               </p>
+            </div>
           </div>
       {% endfor %}      
     </div>
