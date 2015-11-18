@@ -1,0 +1,926 @@
+[
+    {
+        "small_image": "https://i.scdn.co/image/c62b0a6c13233672632b95da7a80200a56d7d189",
+        "artists": [
+            {
+                "uri": "/api/artists/1"
+            }
+        ],
+        "year": null,
+        "songs": [
+            {
+                "uri": "/api/songs/1"
+            },
+            {
+                "uri": "/api/songs/2"
+            },
+            {
+                "uri": "/api/songs/3"
+            },
+            {
+                "uri": "/api/songs/4"
+            },
+            {
+                "uri": "/api/songs/5"
+            },
+            {
+                "uri": "/api/songs/6"
+            },
+            {
+                "uri": "/api/songs/7"
+            },
+            {
+                "uri": "/api/songs/8"
+            },
+            {
+                "uri": "/api/songs/9"
+            },
+            {
+                "uri": "/api/songs/10"
+            },
+            {
+                "uri": "/api/songs/11"
+            },
+            {
+                "uri": "/api/songs/12"
+            }
+        ],
+        "id": 1,
+        "large_image": "https://i.scdn.co/image/bb6bb58b42afeb0fdd13922ec0d138e6734421e1",
+        "type": "album",
+        "name": "Grow",
+        "uri": "/api/releases/1",
+        "medium_image": "https://i.scdn.co/image/84fa3ab218c3ab1a6dd5b1333fdb507472d9b132",
+        "spotify_url": "https://open.spotify.com/album/3pYRPmrFNBhewVtiN6DBh7"
+    },
+    {
+        "small_image": "https://i.scdn.co/image/b40ae03fd16cc8e35802f3c6648a2351a08f6d8c",
+        "artists": [
+            {
+                "uri": "/api/artists/1"
+            }
+        ],
+        "year": null,
+        "songs": [
+            {
+                "uri": "/api/songs/13"
+            },
+            {
+                "uri": "/api/songs/14"
+            },
+            {
+                "uri": "/api/songs/15"
+            },
+            {
+                "uri": "/api/songs/16"
+            },
+            {
+                "uri": "/api/songs/17"
+            },
+            {
+                "uri": "/api/songs/18"
+            }
+        ],
+        "id": 2,
+        "large_image": "https://i.scdn.co/image/2624fd54da92194bb3bfadedc7d3843bd434a3e4",
+        "type": "album",
+        "name": "Woohoo!",
+        "uri": "/api/releases/2",
+        "medium_image": "https://i.scdn.co/image/627d047d8d27e2296b1e28050469c421790c06e0",
+        "spotify_url": "https://open.spotify.com/album/1NOc2eqgqq4oqDrFP8aiOX"
+    },
+    {
+        "small_image": "https://i.scdn.co/image/7778a9930058b52bf4af32bdb91bfd2e2b0eedbf",
+        "artists": [
+            {
+                "uri": "/api/artists/1"
+            }
+        ],
+        "year": null,
+        "songs": [
+            {
+                "uri": "/api/songs/19"
+            },
+            {
+                "uri": "/api/songs/20"
+            },
+            {
+                "uri": "/api/songs/21"
+            },
+            {
+                "uri": "/api/songs/22"
+            },
+            {
+                "uri": "/api/songs/23"
+            },
+            {
+                "uri": "/api/songs/24"
+            },
+            {
+                "uri": "/api/songs/25"
+            },
+            {
+                "uri": "/api/songs/26"
+            }
+        ],
+        "id": 3,
+        "large_image": "https://i.scdn.co/image/e7266e72d079dbb3d20e52fda9dbb272989b1716",
+        "type": "album",
+        "name": "Newborn Sun",
+        "uri": "/api/releases/3",
+        "medium_image": "https://i.scdn.co/image/da09538d9f4d3b1b9f2cb802975e9057c718822d",
+        "spotify_url": "https://open.spotify.com/album/6gDHF6BrncxR8UlIuvfUpT"
+    },
+    {
+        "small_image": "https://i.scdn.co/image/893ebe7bd325143e9c456b44982dce63b1042b8c",
+        "artists": [
+            {
+                "uri": "/api/artists/2"
+            }
+        ],
+        "year": null,
+        "songs": [
+            {
+                "uri": "/api/songs/27"
+            },
+            {
+                "uri": "/api/songs/28"
+            },
+            {
+                "uri": "/api/songs/29"
+            },
+            {
+                "uri": "/api/songs/30"
+            },
+            {
+                "uri": "/api/songs/31"
+            },
+            {
+                "uri": "/api/songs/32"
+            },
+            {
+                "uri": "/api/songs/33"
+            },
+            {
+                "uri": "/api/songs/34"
+            },
+            {
+                "uri": "/api/songs/35"
+            },
+            {
+                "uri": "/api/songs/36"
+            },
+            {
+                "uri": "/api/songs/37"
+            }
+        ],
+        "id": 4,
+        "large_image": "https://i.scdn.co/image/a3d6acba80d3cb183f182c879a9f7eb49e9ef10f",
+        "type": "album",
+        "name": "Rooms of the House",
+        "uri": "/api/releases/4",
+        "medium_image": "https://i.scdn.co/image/bb2899e85c61f93b6a5b327e327920b8bd998f69",
+        "spotify_url": "https://open.spotify.com/album/201f8uQMzlWxYN6Wy7IIDg"
+    },
+    {
+        "small_image": "https://i.scdn.co/image/7c46e7e1d95a3af4b192f45f277a6b7b85a53cd6",
+        "artists": [
+            {
+                "uri": "/api/artists/2"
+            }
+        ],
+        "year": null,
+        "songs": [
+            {
+                "uri": "/api/songs/38"
+            },
+            {
+                "uri": "/api/songs/39"
+            },
+            {
+                "uri": "/api/songs/40"
+            },
+            {
+                "uri": "/api/songs/41"
+            },
+            {
+                "uri": "/api/songs/42"
+            },
+            {
+                "uri": "/api/songs/43"
+            },
+            {
+                "uri": "/api/songs/44"
+            },
+            {
+                "uri": "/api/songs/45"
+            },
+            {
+                "uri": "/api/songs/46"
+            },
+            {
+                "uri": "/api/songs/47"
+            },
+            {
+                "uri": "/api/songs/48"
+            },
+            {
+                "uri": "/api/songs/49"
+            },
+            {
+                "uri": "/api/songs/50"
+            },
+            {
+                "uri": "/api/songs/51"
+            }
+        ],
+        "id": 5,
+        "large_image": "https://i.scdn.co/image/18becbd8fee9f7d7741f408648103cded9379786",
+        "type": "album",
+        "name": "Wildlife",
+        "uri": "/api/releases/5",
+        "medium_image": "https://i.scdn.co/image/9fa56fb2c9cc0361750449f799932df9ca056f6c",
+        "spotify_url": "https://open.spotify.com/album/1zAMnOQUqSq3xCMgeBS6i2"
+    },
+    {
+        "small_image": "https://i.scdn.co/image/2c765011322bebad59cc7b7b38edde4f9a02b92a",
+        "artists": [
+            {
+                "uri": "/api/artists/2"
+            }
+        ],
+        "year": null,
+        "songs": [
+            {
+                "uri": "/api/songs/52"
+            },
+            {
+                "uri": "/api/songs/53"
+            },
+            {
+                "uri": "/api/songs/54"
+            },
+            {
+                "uri": "/api/songs/55"
+            },
+            {
+                "uri": "/api/songs/56"
+            },
+            {
+                "uri": "/api/songs/57"
+            },
+            {
+                "uri": "/api/songs/58"
+            },
+            {
+                "uri": "/api/songs/59"
+            },
+            {
+                "uri": "/api/songs/60"
+            },
+            {
+                "uri": "/api/songs/61"
+            },
+            {
+                "uri": "/api/songs/62"
+            },
+            {
+                "uri": "/api/songs/63"
+            },
+            {
+                "uri": "/api/songs/64"
+            }
+        ],
+        "id": 6,
+        "large_image": "https://i.scdn.co/image/170fe4a21f892d34b4245a3b4f0c60e44c5d6161",
+        "type": "album",
+        "name": "Somewhere at the Bottom of the River Between Vega and Altair",
+        "uri": "/api/releases/6",
+        "medium_image": "https://i.scdn.co/image/0c81387ba204b94675878be2a1b22de535a662cb",
+        "spotify_url": "https://open.spotify.com/album/0MT2nypErOpCsHXuEpwGB2"
+    },
+    {
+        "small_image": "https://i.scdn.co/image/05c7a53c132478b6ab5a22aa7c77a07ce488c0ad",
+        "artists": [
+            {
+                "uri": "/api/artists/2"
+            }
+        ],
+        "year": null,
+        "songs": [
+            {
+                "uri": "/api/songs/65"
+            },
+            {
+                "uri": "/api/songs/66"
+            },
+            {
+                "uri": "/api/songs/67"
+            },
+            {
+                "uri": "/api/songs/68"
+            },
+            {
+                "uri": "/api/songs/69"
+            },
+            {
+                "uri": "/api/songs/70"
+            },
+            {
+                "uri": "/api/songs/71"
+            },
+            {
+                "uri": "/api/songs/72"
+            }
+        ],
+        "id": 7,
+        "large_image": "https://i.scdn.co/image/ff7dd62f667ad89c79fc467673b0182418c3989b",
+        "type": "album",
+        "name": "Vancouver",
+        "uri": "/api/releases/7",
+        "medium_image": "https://i.scdn.co/image/5f2fd0f0bf8cbbb972b19ed9a0acfdfad850dcd8",
+        "spotify_url": "https://open.spotify.com/album/19NRrJFEhkCC1tbFPDMkzA"
+    },
+    {
+        "small_image": "https://i.scdn.co/image/0539cf5a183a8c3789bbc28d398bcc5553f62e97",
+        "artists": [
+            {
+                "uri": "/api/artists/3"
+            }
+        ],
+        "year": null,
+        "songs": [
+            {
+                "uri": "/api/songs/73"
+            },
+            {
+                "uri": "/api/songs/74"
+            },
+            {
+                "uri": "/api/songs/75"
+            },
+            {
+                "uri": "/api/songs/76"
+            },
+            {
+                "uri": "/api/songs/77"
+            },
+            {
+                "uri": "/api/songs/78"
+            },
+            {
+                "uri": "/api/songs/79"
+            },
+            {
+                "uri": "/api/songs/80"
+            },
+            {
+                "uri": "/api/songs/81"
+            },
+            {
+                "uri": "/api/songs/82"
+            },
+            {
+                "uri": "/api/songs/83"
+            },
+            {
+                "uri": "/api/songs/84"
+            }
+        ],
+        "id": 8,
+        "large_image": "https://i.scdn.co/image/d9fc535970f6e312087ea486c501731df9a94b61",
+        "type": "album",
+        "name": "Instant Gratification",
+        "uri": "/api/releases/8",
+        "medium_image": "https://i.scdn.co/image/7adb6d09bc02cde1d6967ea868441224964ae9e2",
+        "spotify_url": "https://open.spotify.com/album/75Z98z7kl42oWcT0UvtO6e"
+    },
+    {
+        "small_image": "https://i.scdn.co/image/e3c08f6540ba45d757ab2b83759d19e3c1d35cb6",
+        "artists": [
+            {
+                "uri": "/api/artists/3"
+            }
+        ],
+        "year": null,
+        "songs": [
+            {
+                "uri": "/api/songs/85"
+            },
+            {
+                "uri": "/api/songs/86"
+            },
+            {
+                "uri": "/api/songs/87"
+            },
+            {
+                "uri": "/api/songs/88"
+            },
+            {
+                "uri": "/api/songs/89"
+            },
+            {
+                "uri": "/api/songs/90"
+            },
+            {
+                "uri": "/api/songs/91"
+            },
+            {
+                "uri": "/api/songs/92"
+            },
+            {
+                "uri": "/api/songs/93"
+            },
+            {
+                "uri": "/api/songs/94"
+            },
+            {
+                "uri": "/api/songs/95"
+            }
+        ],
+        "id": 9,
+        "large_image": "https://i.scdn.co/image/b580612ec397eb9a46be7f2bfa7853a1cd5d7e2f",
+        "type": "album",
+        "name": "Acceptance Speech",
+        "uri": "/api/releases/9",
+        "medium_image": "https://i.scdn.co/image/a59d7287a9c353338600c5b16f7b0f309a78062c",
+        "spotify_url": "https://open.spotify.com/album/0i5fg8UAk0KU074O2fC8Pe"
+    },
+    {
+        "small_image": "https://i.scdn.co/image/35aaec9dc92800c26fb49bab04c0146e302d3f16",
+        "artists": [
+            {
+                "uri": "/api/artists/3"
+            }
+        ],
+        "year": null,
+        "songs": [
+            {
+                "uri": "/api/songs/96"
+            },
+            {
+                "uri": "/api/songs/97"
+            },
+            {
+                "uri": "/api/songs/98"
+            },
+            {
+                "uri": "/api/songs/99"
+            },
+            {
+                "uri": "/api/songs/100"
+            },
+            {
+                "uri": "/api/songs/101"
+            },
+            {
+                "uri": "/api/songs/102"
+            },
+            {
+                "uri": "/api/songs/103"
+            },
+            {
+                "uri": "/api/songs/104"
+            },
+            {
+                "uri": "/api/songs/105"
+            },
+            {
+                "uri": "/api/songs/106"
+            }
+        ],
+        "id": 10,
+        "large_image": "https://i.scdn.co/image/e65417a32cb5ec2fc61bc44a32f524983d631819",
+        "type": "album",
+        "name": "Downtown Battle Mountain II",
+        "uri": "/api/releases/10",
+        "medium_image": "https://i.scdn.co/image/37cf91fbcb03d74269cab1c1f8982b8c799866cf",
+        "spotify_url": "https://open.spotify.com/album/7tQa07MmbQqwJRNZ7HMjdG"
+    },
+    {
+        "small_image": "https://i.scdn.co/image/a314d3b01b2ee2f30e6872ce282f1c498b2c8981",
+        "artists": [
+            {
+                "uri": "/api/artists/3"
+            }
+        ],
+        "year": null,
+        "songs": [
+            {
+                "uri": "/api/songs/107"
+            },
+            {
+                "uri": "/api/songs/108"
+            },
+            {
+                "uri": "/api/songs/109"
+            },
+            {
+                "uri": "/api/songs/110"
+            },
+            {
+                "uri": "/api/songs/111"
+            },
+            {
+                "uri": "/api/songs/112"
+            },
+            {
+                "uri": "/api/songs/113"
+            },
+            {
+                "uri": "/api/songs/114"
+            },
+            {
+                "uri": "/api/songs/115"
+            },
+            {
+                "uri": "/api/songs/116"
+            }
+        ],
+        "id": 11,
+        "large_image": "https://i.scdn.co/image/8ecf8324370c64d9e097b9a42e9925bec0a1d4e4",
+        "type": "album",
+        "name": "Happiness",
+        "uri": "/api/releases/11",
+        "medium_image": "https://i.scdn.co/image/b83e468c4d3b3a7db1d2b7cd5389f0d31f5d3a9e",
+        "spotify_url": "https://open.spotify.com/album/2uEHtF7phOSbrXdKUes5GL"
+    },
+    {
+        "small_image": "https://i.scdn.co/image/0f1c95d5a514267cb4f53687531c43ec96091359",
+        "artists": [
+            {
+                "uri": "/api/artists/3"
+            }
+        ],
+        "year": null,
+        "songs": [
+            {
+                "uri": "/api/songs/117"
+            },
+            {
+                "uri": "/api/songs/118"
+            },
+            {
+                "uri": "/api/songs/119"
+            },
+            {
+                "uri": "/api/songs/120"
+            },
+            {
+                "uri": "/api/songs/121"
+            },
+            {
+                "uri": "/api/songs/122"
+            },
+            {
+                "uri": "/api/songs/123"
+            },
+            {
+                "uri": "/api/songs/124"
+            },
+            {
+                "uri": "/api/songs/125"
+            },
+            {
+                "uri": "/api/songs/126"
+            },
+            {
+                "uri": "/api/songs/127"
+            },
+            {
+                "uri": "/api/songs/128"
+            },
+            {
+                "uri": "/api/songs/129"
+            }
+        ],
+        "id": 12,
+        "large_image": "https://i.scdn.co/image/6d10d021785e79843d894c946b303e771dcff4c0",
+        "type": "album",
+        "name": "Dance Gavin Dance",
+        "uri": "/api/releases/12",
+        "medium_image": "https://i.scdn.co/image/d049ce646e13459c8de9eca7d671115ac94dddd6",
+        "spotify_url": "https://open.spotify.com/album/12mJ1euri9hLMgGTT6RdQL"
+    },
+    {
+        "small_image": "https://i.scdn.co/image/9ba786a202411b187ecf55407cb9c8d5eb66293b",
+        "artists": [
+            {
+                "uri": "/api/artists/3"
+            }
+        ],
+        "year": null,
+        "songs": [
+            {
+                "uri": "/api/songs/130"
+            },
+            {
+                "uri": "/api/songs/131"
+            },
+            {
+                "uri": "/api/songs/132"
+            },
+            {
+                "uri": "/api/songs/133"
+            },
+            {
+                "uri": "/api/songs/134"
+            },
+            {
+                "uri": "/api/songs/135"
+            },
+            {
+                "uri": "/api/songs/136"
+            },
+            {
+                "uri": "/api/songs/137"
+            },
+            {
+                "uri": "/api/songs/138"
+            },
+            {
+                "uri": "/api/songs/139"
+            },
+            {
+                "uri": "/api/songs/140"
+            }
+        ],
+        "id": 13,
+        "large_image": "https://i.scdn.co/image/d5333a29f7b83b0d8cbf21d9317a21e984621ef9",
+        "type": "album",
+        "name": "Downtown Battle Mountain",
+        "uri": "/api/releases/13",
+        "medium_image": "https://i.scdn.co/image/d0d3af55bf36e8faa152033d774087f98822fa15",
+        "spotify_url": "https://open.spotify.com/album/1VBfG7a6qZVJ1KWPIJpyLz"
+    },
+    {
+        "small_image": "https://i.scdn.co/image/cfdea9c43bf9a6ee0bb866ee4ca37d32bb00640f",
+        "artists": [
+            {
+                "uri": "/api/artists/3"
+            }
+        ],
+        "year": null,
+        "songs": [
+            {
+                "uri": "/api/songs/141"
+            },
+            {
+                "uri": "/api/songs/142"
+            },
+            {
+                "uri": "/api/songs/143"
+            },
+            {
+                "uri": "/api/songs/144"
+            },
+            {
+                "uri": "/api/songs/145"
+            },
+            {
+                "uri": "/api/songs/146"
+            },
+            {
+                "uri": "/api/songs/147"
+            }
+        ],
+        "id": 14,
+        "large_image": "https://i.scdn.co/image/32ec7f82d276e24442f54edf22c525cf66ee5c5d",
+        "type": "album",
+        "name": "Whatever I Say Is Royal Ocean",
+        "uri": "/api/releases/14",
+        "medium_image": "https://i.scdn.co/image/f85f82ff9bc7bee3dcdffe71b12d461f6b2226b8",
+        "spotify_url": "https://open.spotify.com/album/5QGSqVmsCwDaiwUeWUP6Cu"
+    },
+    {
+        "small_image": "https://i.scdn.co/image/7797eca249a3aadbcc6143079e6856369a065a9e",
+        "artists": [
+            {
+                "uri": "/api/artists/4"
+            }
+        ],
+        "year": null,
+        "songs": [
+            {
+                "uri": "/api/songs/148"
+            },
+            {
+                "uri": "/api/songs/149"
+            },
+            {
+                "uri": "/api/songs/150"
+            },
+            {
+                "uri": "/api/songs/151"
+            },
+            {
+                "uri": "/api/songs/152"
+            },
+            {
+                "uri": "/api/songs/153"
+            },
+            {
+                "uri": "/api/songs/154"
+            },
+            {
+                "uri": "/api/songs/155"
+            },
+            {
+                "uri": "/api/songs/156"
+            },
+            {
+                "uri": "/api/songs/157"
+            },
+            {
+                "uri": "/api/songs/158"
+            },
+            {
+                "uri": "/api/songs/159"
+            },
+            {
+                "uri": "/api/songs/160"
+            },
+            {
+                "uri": "/api/songs/161"
+            },
+            {
+                "uri": "/api/songs/162"
+            },
+            {
+                "uri": "/api/songs/163"
+            },
+            {
+                "uri": "/api/songs/164"
+            },
+            {
+                "uri": "/api/songs/165"
+            },
+            {
+                "uri": "/api/songs/166"
+            },
+            {
+                "uri": "/api/songs/167"
+            }
+        ],
+        "id": 15,
+        "large_image": "https://i.scdn.co/image/aae71cda45929c038469429dad68e265a5f3b23a",
+        "type": "album",
+        "name": "No Now",
+        "uri": "/api/releases/15",
+        "medium_image": "https://i.scdn.co/image/e62096b670220169102a9a464aeb9aecd25f18c2",
+        "spotify_url": "https://open.spotify.com/album/2u5TtrM2q61VepuKI8lHdu"
+    },
+    {
+        "small_image": "https://i.scdn.co/image/731b01f5f67d21215728c02786dffe48d9bddace",
+        "artists": [
+            {
+                "uri": "/api/artists/5"
+            }
+        ],
+        "year": null,
+        "songs": [
+            {
+                "uri": "/api/songs/168"
+            },
+            {
+                "uri": "/api/songs/169"
+            },
+            {
+                "uri": "/api/songs/170"
+            },
+            {
+                "uri": "/api/songs/171"
+            },
+            {
+                "uri": "/api/songs/172"
+            }
+        ],
+        "id": 16,
+        "large_image": "https://i.scdn.co/image/c7a963441a2cccb3a6c259178e0a7e40e76aaf78",
+        "type": "album",
+        "name": "New Bermuda",
+        "uri": "/api/releases/16",
+        "medium_image": "https://i.scdn.co/image/115e4afde1504ddebb07096c47daf87918b78a60",
+        "spotify_url": "https://open.spotify.com/album/2e4xOasRFhJn4x2MBM5pdu"
+    },
+    {
+        "small_image": "https://i.scdn.co/image/5617f5ba709d69e9bd95ce280817dfdaf7c5cf77",
+        "artists": [
+            {
+                "uri": "/api/artists/5"
+            }
+        ],
+        "year": null,
+        "songs": [
+            {
+                "uri": "/api/songs/173"
+            },
+            {
+                "uri": "/api/songs/174"
+            },
+            {
+                "uri": "/api/songs/175"
+            },
+            {
+                "uri": "/api/songs/176"
+            },
+            {
+                "uri": "/api/songs/177"
+            },
+            {
+                "uri": "/api/songs/178"
+            },
+            {
+                "uri": "/api/songs/179"
+            }
+        ],
+        "id": 17,
+        "large_image": "https://i.scdn.co/image/9b139324cc7694e5f7618509caa96267b0fa76fe",
+        "type": "album",
+        "name": "Sunbather",
+        "uri": "/api/releases/17",
+        "medium_image": "https://i.scdn.co/image/6df61e3f3f3f33b032794a136f1d46cefc6b8ed8",
+        "spotify_url": "https://open.spotify.com/album/2kKXGWaCEl06EKZ4DxBJIT"
+    },
+    {
+        "small_image": "https://i.scdn.co/image/0840c99c70ecaab277c1a7ad8b75408e58f888ef",
+        "artists": [
+            {
+                "uri": "/api/artists/5"
+            }
+        ],
+        "year": null,
+        "songs": [
+            {
+                "uri": "/api/songs/180"
+            },
+            {
+                "uri": "/api/songs/181"
+            },
+            {
+                "uri": "/api/songs/182"
+            },
+            {
+                "uri": "/api/songs/183"
+            }
+        ],
+        "id": 18,
+        "large_image": "https://i.scdn.co/image/efc60d497991b620853c6acda68a1c89757c32e9",
+        "type": "album",
+        "name": "Roads to Judah",
+        "uri": "/api/releases/18",
+        "medium_image": "https://i.scdn.co/image/c6fe0a7a0f9bded6c977ab086191701591e963ff",
+        "spotify_url": "https://open.spotify.com/album/3QJvQ374mkcQN53AgvE8Ls"
+    },
+    {
+        "small_image": "https://i.scdn.co/image/d0f9b6d7c246ec96542ee63b892ee62583596312",
+        "artists": [
+            {
+                "uri": "/api/artists/6"
+            }
+        ],
+        "year": null,
+        "songs": [
+            {
+                "uri": "/api/songs/184"
+            },
+            {
+                "uri": "/api/songs/185"
+            },
+            {
+                "uri": "/api/songs/186"
+            },
+            {
+                "uri": "/api/songs/187"
+            },
+            {
+                "uri": "/api/songs/188"
+            },
+            {
+                "uri": "/api/songs/189"
+            },
+            {
+                "uri": "/api/songs/190"
+            },
+            {
+                "uri": "/api/songs/191"
+            },
+            {
+                "uri": "/api/songs/192"
+            },
+            {
+                "uri": "/api/songs/193"
+            },
+            {
+                "uri": "/api/songs/194"
+            }
+        ],
+        "id": 19,
+        "large_image": "https://i.scdn.co/image/6dfbd5625a005af9b7acd90c3257ab45f770854f",
+        "type": "album",
+        "name": "Muse",
+        "uri": "/api/releases/19",
+        "medium_image": "https://i.scdn.co/image/bb0d4ababfa14736256a0d9dffb7ca6885df3f45",
+        "spotify_url": "https://open.spotify.com/album/7EyDVKiEcQw9tE44UpcLWJ"
+    }
+]

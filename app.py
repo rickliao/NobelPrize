@@ -172,5 +172,14 @@ def URLsearch():
     url = request.form['search']
     return redirect('/search/' + url)
 
+@app.route("/musicapi/")
+def musicapi():
+    f = open("musicapi.out", 'r')
+    result = []
+    for line in f:
+        result += [line]
+    f.close()
+    return render_template('musicapi.html', result=result);
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
