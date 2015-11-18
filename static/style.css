@@ -1,8 +1,8 @@
 #main-container
 {
   background-color: #000000;
-  color:#ffffff;
-  padding-bottom:70px;
+  color: #ffffff;
+  padding-bottom: 70px;
 }
 
 #navbar-style
@@ -33,9 +33,31 @@
   display: inline;
 }
 
+.div-search-box
+{
+  background-color: #dddddd;
+  border-style: double;
+  border-color: #000000;
+  margin-top: 25px;
+}
+
+.finder
+{
+  background-color: #99ccff;
+}
+
 p h2 h3
 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+a:link
+{
+  color: #000099;
+}
+
+a:visited
+{
+  color: #000099;
+}
 

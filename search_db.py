@@ -72,7 +72,7 @@ def findContexts(terms, searchString):
     complete = "..."+match.group(0)+"..."
     
     # remove dulplicates from terms
-    termsSet = Set(terms)
+    termsSet = set(terms)
     for query in termsSet:
         noCaseQuery = re.compile(re.escape(query), re.IGNORECASE)
         complete = noCaseQuery.sub("~"+query+"~", complete)
