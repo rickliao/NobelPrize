@@ -1,4 +1,4 @@
-from flask import render_template, abort
+from flask import render_template, abort, redirect, url_for, request
 from db import db, app
 from flask.ext.restless import APIManager
 from models import Prize, Laureate, Country
@@ -166,6 +166,11 @@ def error_404(error):
 @app.route("/error")
 def error():
     return render_template('error.html')
+
+@app.route("/searchURL/", methods=['POST'])
+def URLsearch():
+    url = request.form['search']
+    return redirect('/search/' + url)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
