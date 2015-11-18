@@ -3,6 +3,7 @@ from flask.ext.testing import TestCase
 
 from db import db, app
 from models import Prize, Laureate, Country
+from search_db import searchTermAnd, searchTermOr
 
 TEST_DATABASE_URI = "sqlite://"
 #TEST_DATABASE_URI = 'mysql://nobeladmin:cs373Prize@localhost/nobeldb'
@@ -138,6 +139,49 @@ class TestCountries(TestCase):
         db.session.commit()
         assert len(Country.query.all()) == 1 
 
+
+class TestSearch(TestCase):
+    def create_app(self):
+        app.config['SQLALCHEMY_DATABASE_URI'] = TEST_DATABASE_URI
+        return app
+
+    def setUp(self):
+        db.create_all()
+        laureate1 = Laureate("Yuan", 1, "1956-11-2", "M", "u1", 1)
+        laureate1.search_text = "yuan taiwan"
+        laureate2 = Laureate("Yuan", 2, "1939-4-7", "F", "u2", 1)
+        laureate2.search_text = "yuan"
+        prize1 = Prize("Physics", 1991, 2, "motivation1", "u1")
+        prize1.search_text = "one yuan"
+        prize2 = Prize("Physics", 1991, 2, "motivation1", "u1")
+        prize2.search_text = "taiwan one yuan"
+        country1 = Country("SE", "Sweden", 10, 7, 10000000, "u1")
+        country1.search_text = "taiwan ldksfjsl;fkjsd yuan"
+        country2 = Country("SR", "Sweden", 10, 7, 10000000, "u1")
+        country2.search_text = "two yuan"
+        db.session.add(laureate1)
+        db.session.add(laureate2)
+        db.session.add(prize1)
+        db.session.add(prize2)
+        db.session.add(country1)
+        db.session.add(country2)
+        db.session.commit()
+  
+    def tearDown(self):
+        db.session.remove()
+        db.drop_all()
+ 
+    def test_search_and(self):
+        links, titles, contexts = searchTermAnd("yuan taiwan")
+        assert len(links) == len(titles)
+        assert len(titles) == len(contexts)
+        assert len(links) == 3
+
+    def test_search_or(self):
+        links, titles, contexts = searchTermOr("yuan taiwan")
+        assert len(links) == len(titles)
+        assert len(titles) == len(contexts)
+        assert len(links) == 6
 
 if __name__ == '__main__':
     unittest.main()
