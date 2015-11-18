@@ -1,6 +1,8 @@
 from models import Prize, Laureate, Country
 import re
 
+# search for "term" in database
+# all words in term must exist in database to be returned
 def searchTermAnd(term):
     links = []
     contexts = []
@@ -33,6 +35,7 @@ def searchTermAnd(term):
     
     return (links, titles, contexts)
 
+# return true if all words in term exist in searchString, false otherwise
 def allInString(terms, searchString):
     inString = True
     for query in terms:
@@ -40,6 +43,7 @@ def allInString(terms, searchString):
             inString = False
     return inString
 
+# return true if one of the words in terms exist in searchString, false otherwise
 # also return a list of queries that exist in searchString
 def oneInString(terms, searchString):
     inString = False
@@ -50,6 +54,7 @@ def oneInString(terms, searchString):
             inStringList += [query]
     return (inString, inStringList) 
 
+# return the part of searchString that is relevant according to the terms searched
 def findContexts(terms, searchString):
     # find bound (inclusive, exclusive)
     min = len(searchString)
@@ -65,7 +70,10 @@ def findContexts(terms, searchString):
     words = re.compile("([^ ]*)( ?)([^ ]*)"+re.escape(context)+"([^ ]*)( ?)([^ ]*)", re.IGNORECASE)
     match = words.search(searchString)
     complete = "..."+match.group(0)+"..."
-    for query in terms:
+    
+    # remove dulplicates from terms
+    termsSet = Set(terms)
+    for query in termsSet:
         noCaseQuery = re.compile(re.escape(query), re.IGNORECASE)
         complete = noCaseQuery.sub("~"+query+"~", complete)
 
@@ -84,6 +92,8 @@ def findContexts(terms, searchString):
             break
     return listOfWords
 
+# search for term in database
+# only one word in term needs to eb in database for the page to be returned
 def searchTermOr(term):
     links = []
     contexts = []
