@@ -41,6 +41,20 @@
   margin-top: 25px;
 }
 
+.dynamic-textbox
+{
+  background-color: #dddddd;
+  color: #000000;
+  border-style: double;
+  border-color: #000000;
+}
+
+.about-textbox
+{
+  border-style: double;
+  background-color: #ffffff;
+}
+
 .finder
 {
   background-color: #99ccff;
