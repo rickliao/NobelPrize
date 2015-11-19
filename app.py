@@ -9,9 +9,9 @@ import os
 from search_db import searchTermAnd, searchTermOr
 
 manager = APIManager(app, flask_sqlalchemy_db=db)
-manager.create_api(Prize, methods=['GET'], include_columns=['id', 'category', 'laureates', 'year', 'nr_laureates'])
-manager.create_api(Laureate, methods=['GET'], include_columns=['id', 'name', 'country_id', 'date_of_birth', 'gender', 'nr_prizes'])
-manager.create_api(Country, methods=['GET'], include_columns=['country_code', 'name', 'laureates', 'nr_laureates', 'nr_prizes', 'population'])
+manager.create_api(Prize, methods=['GET'], results_per_page=1000, max_results_per_page=1000, exclude_columns=['url', 'search_text'])
+manager.create_api(Laureate, methods=['GET'], results_per_page=1000, max_results_per_page=1000, exclude_columns=['url', 'search_text'])
+manager.create_api(Country, methods=['GET'], results_per_page=1000, max_results_per_page=1000, exclude_columns=['url', 'search_text'])
 
 @app.route("/")
 def index():
