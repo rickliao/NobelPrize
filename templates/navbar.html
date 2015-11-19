@@ -14,6 +14,9 @@
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.js"></script>
     <script type="text/javascript" charset="utf8" src="/static/start_datatable.js"></script>
     <script type="text/javascript" charset="utf8" src="/static/functions.js"></script>
+    <script type="text/javascript" src="http://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script type="text/javascript" src="http://www.amcharts.com/lib/3/serial.js"></script>
+    <script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/light.js"></script>
     {% endblock %}
   </head> 
   {% block body %}
@@ -26,14 +29,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <!--- <a class="navbar-left" style="padding-top:10px;" href="/"><img src="/static/NobelPrizeLogo.png" name="NobelPrize" onmouseover="invs(this.name)" onmouseout="rmInvs(this.name)" height="65px" width="250px"></a> -->
-        </div>
-	<form class="navbar-form navbar-right form-inline" style="padding:10px;" action="/searchURL/" method="POST">
-  	  <input class="btn btn-default" type="submit" style="float: right"/>
-          <div style="overflow: hidden; padding-right: .5em;">
-            <input class="form-control" type="text" name="search" style="width: 100%;" />
-          </div>
-        </form>
+	</div>
         <div class="collapse navbar-collapse" id="navigationbar">
           <ul class="nav navbar-nav navbar-left">
             <li><a href="/"><img src="/static/HomeLogo.png" name="Home" onmouseover="invs(this.name)" onmouseout="rmInvs(this.name)" height="46px" width="112px"/></a></li>
@@ -41,6 +37,14 @@
             <li><a href="/laureates"><img src="/static/LaureateLogo.png" name="Laureate" onmouseover="invs(this.name)" onmouseout="rmInvs(this.name)" height="46px" width="153px"/></a></li>
             <li><a href="/countries"><img src="/static/CountryLogo.png" name="Country" onmouseover="invs(this.name)" onmouseout="rmInvs(this.name)" height="55px" width="139px"/></a></li>
             <li><a href="/about"><img src="/static/AboutLogo.png" name="About" onmouseover="invs(this.name)" onmouseout="rmInvs(this.name)" height="46px" width="114px"/></a></li>
+	    <li>
+              <form class="navbar-right form-inline" style="padding:20px;" action="/searchURL/" method="POST">
+  	        <input class="btn btn-default" type="submit" style="float: right"/>
+                <div style="overflow: hidden; padding-right: .5em;">
+                 <input class="form-control" type="text" name="search" style="width: 100%;" />
+                </div>
+              </form>
+	    </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
