@@ -181,7 +181,6 @@ def musicapi():
         val += result[1] + " " +  result[0] + "|"
     f.close()
     jsonVal = json.dumps(val)
-    print(str(jsonVal))
 
     return render_template('musicapi.html', val = str(jsonVal));
 
