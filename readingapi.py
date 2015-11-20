@@ -56,4 +56,4 @@ for x in albuminfo:
 artistinfo.sort(key=operator.attrgetter('songs'))
 artistinfo.reverse()
 for n in artistinfo:
-	print("Songs: ", n.songs, ", Artist Name: ", n.name)
+	print(n.songs,  n.name)

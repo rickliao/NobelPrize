@@ -9,59 +9,27 @@
   <div class="jumbotron">
     <div class="container">
       <h1>API:</h1>
-      <div class="well well-sm">
-        <p>{% for line in result %}
-               {{line}}<br>
-           {% endfor %}</p>
-      </div>
+        <p>These are statistics compiled using the data extrapolated from the Music Mecca website. This graph shows songs per artist.</p>
         <script>
+        var data = "{{val}}"
+        var dataArr = data.split("|")
+        dataArr[0] = dataArr[0].substring(5, dataArr[0].length)
+        var pairArr = []
+        for(i = 0; i < dataArr.length-1; i++) {
+          var pair = dataArr[i].split(" ")
+          var pairObj = {'artist':pair[0], 'songs':pair[1]}
+          pairArr.push(pairObj)
+        }
         var chart = AmCharts.makeChart( "chartdiv", {
           "type": "serial",
           "theme": "light",
-          "dataProvider": [ {
-            "country": "USA",
-            "visits": 2025
-          }, {
-            "country": "China",
-            "visits": 1882
-          }, {
-            "country": "Japan",
-            "visits": 1809
-          }, {
-            "country": "Germany",
-            "visits": 1322
-          }, {
-            "country": "UK",
-            "visits": 1122
-          }, {
-            "country": "France",
-            "visits": 1114
-          }, {
-            "country": "India",
-            "visits": 984
-          }, {
-            "country": "Spain",
-            "visits": 711
-          }, {
-            "country": "Netherlands",
-            "visits": 665
-          }, {
-            "country": "Russia",
-            "visits": 580
-          }, {
-            "country": "South Korea",
-            "visits": 443
-          }, {
-            "country": "Canada",
-            "visits": 441
-          }, {
-            "country": "Brazil",
-            "visits": 395
-          } ],
+          "dataProvider": pairArr,
           "valueAxes": [ {
             "gridColor": "#FFFFFF",
             "gridAlpha": 0.2,
-            "dashLength": 0
+            "dashLength": 0,
+            "position": "left",
+            "title": "Number of Songs"
           } ],
           "gridAboveGraphs": true,
           "startDuration": 1,
@@ -70,24 +38,24 @@
             "fillAlphas": 0.8,
             "lineAlpha": 0.2,
             "type": "column",
-            "valueField": "visits"
+            "valueField": "songs"
           } ],
           "chartCursor": {
             "categoryBalloonEnabled": false,
             "cursorAlpha": 0,
             "zoomable": false
           },
-          "categoryField": "country",
+          "categoryField": "artist",
           "categoryAxis": {
             "gridPosition": "start",
             "gridAlpha": 0,
             "tickPosition": "start",
-            "tickLength": 20
+            "tickLength": 20,
+            "title": "Artist"
           },
           "export": {
             "enabled": true
-          }
-
+          } 
           } );
       </script>
       <div id="chartdiv"></div>

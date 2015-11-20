@@ -175,11 +175,15 @@ def URLsearch():
 @app.route("/musicapi/")
 def musicapi():
     f = open("musicapi.out", 'r')
-    result = []
+    val = ""
     for line in f:
-        result += [line]
+        result = line.split(' ')
+        val += result[1] + " " +  result[0] + "|"
     f.close()
-    return render_template('musicapi.html', result=result);
+    jsonVal = json.dumps(val)
+    print(str(jsonVal))
+
+    return render_template('musicapi.html', val = str(jsonVal));
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
