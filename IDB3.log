@@ -1,3 +1,190 @@
+commit df5f30a7d3e27d52273cdf63db353568717a217d
+Author: Rick <rickliao@utexas.edu>
+Date:   Fri Nov 20 02:42:15 2015 +0000
+
+    everything
+
+commit f2f32d2ddf893ba357f60898360603efbdbe0c6d
+Author: Rick <rickliao@utexas.edu>
+Date:   Fri Nov 20 02:31:34 2015 +0000
+
+    Updated about page
+
+commit 3ca67c1a6cbc6befa09305bb5673735823fe6429
+Author: Rick <rickliao@utexas.edu>
+Date:   Fri Nov 20 00:50:35 2015 +0000
+
+    Updated reponsibilities:
+
+commit d05fcd87e4a13f51ff7440c036204018e895ec66
+Author: Rick <rickliao@utexas.edu>
+Date:   Fri Nov 20 00:28:23 2015 +0000
+
+    better about page
+
+commit 99d4a2337669051c428da790902631d9e911c640
+Merge: 6a9578b f2d5e40
+Author: Rick <rickliao@utexas.edu>
+Date:   Fri Nov 20 00:03:15 2015 +0000
+
+    Merge branch 'master' of https://github.com/rickliao/NobelPrize
+
+commit f2d5e40fc50b0131f5312496ab482e00b2d61c8a
+Merge: 4f12eb1 e9c8840
+Author: Chris <crb828@ymail.com>
+Date:   Thu Nov 19 17:11:21 2015 -0600
+
+    Merge branch 'master' of https://github.com/rickliao/NobelPrize
+
+commit 4f12eb11936711e4b61d6e853ca1d2b80ab2d26d
+Author: Chris <crb828@ymail.com>
+Date:   Thu Nov 19 17:10:56 2015 -0600
+
+    now finding highest most songs by artist
+
+commit 6a9578bdc37243d53f5d192c40c103d8b88cb84c
+Merge: 4f426a5 e9c8840
+Author: Rick <rickliao@utexas.edu>
+Date:   Thu Nov 19 20:19:58 2015 +0000
+
+    Merge branch 'master' of https://github.com/rickliao/NobelPrize
+
+commit 4f426a52cd89a82a4cb25fc6b77bf5fa1bacdc7e
+Author: Rick <rickliao@utexas.edu>
+Date:   Thu Nov 19 07:21:09 2015 +0000
+
+    Fixed API pagination
+
+commit e9c8840ad703c50537263f8119c69b803547d9df
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Wed Nov 18 23:59:08 2015 -0600
+
+    js change on graph
+
+commit db57e755abed7d770f72436c82f7f1fbce8c6f2d
+Merge: 0407f0b 1a914b9
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Wed Nov 18 23:51:54 2015 -0600
+
+    Merge branch 'master' of https://github.com/rickliao/NobelPrize
+
+commit 0407f0b60befff8bff329d7e8db8f3d2ac116164
+Author: Rick Liao <rickliao@utexas.edu>
+Date:   Wed Nov 18 23:51:44 2015 -0600
+
+    bargraph template
+
+commit 1a914b9952548cbf581fb3da1a0c5f831645e2e7
+Author: Rick <rickliao@utexas.edu>
+Date:   Thu Nov 19 03:31:27 2015 +0000
+
+    fixed minor visual bugs along with templates
+
+commit f90adbc176b5a34f4f815dc1a49f045834191c1e
+Author: Chris <crb828@ymail.com>
+Date:   Tue Nov 17 23:52:45 2015 -0600
+
+    forgot to change title in the musicapi.html page
+
+commit f50cdf5bb9319db85c8370376d61cacce77ea2d5
+Merge: 3809361 b297efc
+Author: Chris <crb828@ymail.com>
+Date:   Tue Nov 17 23:48:03 2015 -0600
+
+    Merge branch 'master' of https://github.com/rickliao/NobelPrize
+
+commit 38093610706d3d8dcd8a51a74df733fbcffbb2c1
+Author: Chris <crb828@ymail.com>
+Date:   Tue Nov 17 23:47:46 2015 -0600
+
+    added the API stuff
+
+commit b297efcf233a7eac8ace29056ca6d850a056972e
+Author: Rick <rickliao@utexas.edu>
+Date:   Wed Nov 18 03:58:57 2015 +0000
+
+     new search background
+
+commit cedf42b017c5fb871bea19c1717b1d2718403079
+Author: Rick <rickliao@utexas.edu>
+Date:   Wed Nov 18 03:58:21 2015 +0000
+
+    remove temp app.py
+
+commit f2c1c57ea55ed2bbd613acedbc2ab73ca1ec1675
+Author: Rick <rickliao@utexas.edu>
+Date:   Wed Nov 18 03:41:59 2015 +0000
+
+    Result pages from search looks better
+
+commit 79e7a671a695f22079b30ba99db9817fad3a4c7f
+Author: Rick <rickliao@utexas.edu>
+Date:   Wed Nov 18 03:37:21 2015 +0000
+
+    test cases for search
+
+commit b5cb9148421d79ebb4240f28f5bf5fa75f0258fe
+Author: Rick <rickliao@utexas.edu>
+Date:   Wed Nov 18 01:59:45 2015 +0000
+
+    fixed searched for same term highlight problem
+
+commit 0e3e94c35b317c6556f40ddcab21f03008c134b6
+Author: Rick <rickliao@utexas.edu>
+Date:   Wed Nov 18 01:39:43 2015 +0000
+
+    Working search bar
+
+commit 884e2e20e123517830cc3f12fbfe2188183c5541
+Author: Rick <rickliao@utexas.edu>
+Date:   Tue Nov 17 23:12:16 2015 +0000
+
+    tools section completed
+
+commit 6badb520d9556924a9390f150f40b37b10f95e1e
+Merge: 834aaa7 7e27dd4
+Author: Rick <rick@rick-Inspiron-N5010>
+Date:   Sun Nov 15 20:28:05 2015 -0600
+
+    Merge branch 'master' of http://github.com/rickliao/NobelPrize
+
+commit 834aaa70d4faccdcb4ebc677bbc345d5a94192d5
+Author: Rick <rick@rick-Inspiron-N5010>
+Date:   Sun Nov 15 20:27:53 2015 -0600
+
+    added tools section
+
+commit 7e27dd453df41c03c1b4897e1e96ac7d80e7b49e
+Author: Rick <rickliao@utexas.edu>
+Date:   Mon Nov 16 01:56:04 2015 +0000
+
+    changed port number back
+
+commit a7084fdf311902a28ae0bbb3b334177d1fd8e173
+Merge: 52e0cc2 ac2e7df
+Author: Rick <rickliao@utexas.edu>
+Date:   Mon Nov 16 01:18:05 2015 +0000
+
+    Merge branch 'master' of https://github.com/rickliao/NobelPrize
+
+commit 52e0cc2e39bc02d0d13cac7350aeba0a182a9a10
+Author: Rick <rickliao@utexas.edu>
+Date:   Mon Nov 16 01:17:54 2015 +0000
+
+    changed log number and makefile
+
+commit ac2e7df8e243f046f1360e55bd29f7d7e8e654dc
+Author: Rick <rick@rick-Inspiron-N5010>
+Date:   Sun Nov 15 19:12:58 2015 -0600
+
+    uml model pic for wiki because embedding a pdf is too damn hard
+
+commit cb059e16bf8dc134e96fdf746addf6c749b12d29
+Author: Rick <rick@rick-Inspiron-N5010>
+Date:   Sun Nov 15 19:04:37 2015 -0600
+
+    server spec image for wiki
+
 commit 7e207e3a0464c5ba52f4dbc775e34e83545c0346
 Author: Rick <rickliao@utexas.edu>
 Date:   Thu Nov 12 22:56:37 2015 +0000
