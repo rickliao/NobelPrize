@@ -19,8 +19,8 @@
                  {% for phrase in contexts[outer_loop.index0] %}
                     {% if loop.index0 % 2 == 0 %}
                       {{phrase}}
-                   {% else %}
-                        <mark class="finder">{{phrase}}</mark>
+                    {% else %}
+                      <mark class="finder">{{phrase}}</mark>
                     {% endif %}
                 {% endfor %}
                 </p>

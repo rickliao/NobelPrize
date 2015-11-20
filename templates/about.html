@@ -51,7 +51,7 @@
           <p><b>No. of unit tests:</b> 3</p>
         </div>
       </div>
-      <div class="center-content">
+      <div class="center-content about-textbox" style="margin-left:25%;margin-right:25%;">
         <h2><b>Stats</b></h2>
         <p>Total no. of commits: 86</p>
         <p>Total no. of issues: 25<p>
@@ -61,32 +61,32 @@
         <p><b><a href='https://github.com/rickliao/NobelPrize'>GitHub Repo</a></b><p>
         <p><b><a href='https://github.com/rickliao/NobelPrize/wiki'>GitHub Wiki</a></b><p>
       </div>
-      <h2><b>Data</b></h2>
-      <h3><a href='https://nobelprize.readme.io/v1.0'><b>Nobel Prize API</b></a></h3>
-      <p>We used requests from python to get information from the API. For example, a get call to <code>http://api.nobelprize.org/v1/prize.json?year=2008&category=economics</code> will return the information in json for nobel prize in economics in 2008. For each prize, the API also return the laureate's id, which is used to get laureate information from the same API. A get call like <code>http://api.nobelprize.org/v1/laureate.json?id=919</code> returns the information associated with the laureate whose id is 919.</p>
-      <h3><a href='https://restcountries.eu/'><b>Countries API</b></a></h3>
-      <p>We used this API to get information on coutnries. Each laureate returned from Nobel Prize API contains a country code, and we use this country code to scrap data of the country. For example, a get call to <code>https://restcountries.eu/rest/v1/alpha/us</code> will return the information in json on country with country code <code>us</code>, which is United States.</p>
-      <h2><b>Tools</b></h2>
-        <h3><b>Front End:</b></h3>
-          <ul>
-            <li><a href='http://getbootstrap.com/'><b>Bootstrap</b></a></li>
-            <li><a href='https://www.datatables.net/'><b>DataTables</b></a></li>
-            <li><a href='https://angularjs.org/'><b>AngularJS</b></a></li>
-          </ul> 
-        <h3><b>Back End:</b></h3>
-          <ul>
-            <li><a href='https://www.python.org/download/releases/3.0/'><b>Python3</b></a></li>
-            <li><a href='http://flask.pocoo.org/'><b>Flask</b></a></li>
-            <li><a href='https://pythonhosted.org/Flask-SQLAlchemy/'><b>Flask SQLAlchemy Extension</b></a></li>
-            <li><a href='https://flask-restless.readthedocs.org/en/latest/index.html'><b>Flask Rest Extension</b></a></li> 
-            <li><a href='https://www.mysql.com/'><b>MySQL</b></a></li>
-          </ul>
-        <h3><b>Embedding Media:</b></h3>
-          <ul>
-            <li><a href='https://developers.google.com/image-search/v1/jsondevguide?hl=en'><b>Google Image Search API</b></a></li>
-          </ul>
-      <h2><b>Tests</b></h2>
-        <a href="/aboutT" class="btn btn-primary btn-lg active" role="button">Run Tests</a>
+      <div class="about-textbox" style="padding:30px;">
+        <h2><b>Data</b></h2>
+        <h3><a href='https://nobelprize.readme.io/v1.0'><b>Nobel Prize API</b></a></h3>
+        <p>We used requests from python to get information from the API. For example, a get call to <code>http://api.nobelprize.org/v1/prize.json?year=2008&category=economics</code> will return the information in json for nobel prize in economics in 2008. For each prize, the API also return the laureate's id, which is used to get laureate information from the same API. A get call like <code>http://api.nobelprize.org/v1/laureate.json?id=919</code> returns the information associated with the laureate whose id is 919.</p>
+        <h3><a href='https://restcountries.eu/'><b>Countries API</b></a></h3>
+        <p>We used this API to get information on coutnries. Each laureate returned from Nobel Prize API contains a country code, and we use this country code to scrap data of the country. For example, a get call to <code>https://restcountries.eu/rest/v1/alpha/us</code> will return the information in json on country with country code <code>us</code>, which is United States.</p>
+      </div>
+      <div class="center-content about-textbox" style="margin-left:25%;margin-right:25%;">
+        <h2><b>Tools</b></h2>
+          <h3><b>Front End:</b></h3>
+          <p><a href='http://getbootstrap.com/'><b>Bootstrap</b></a></p>
+          <p><a href='https://www.datatables.net/'><b>DataTables</b></a></p>
+          <p><a href='https://angularjs.org/'><b>AngularJS</b></a></p>
+          <h3><b>Back End:</b></h3>
+          <p><a href='https://www.python.org/download/releases/3.0/'><b>Python3</b></a></p>
+          <p><a href='http://flask.pocoo.org/'><b>Flask</b></a></p>
+          <p><a href='https://pythonhosted.org/Flask-SQLAlchemy/'><b>Flask SQLAlchemy Extension</b></a></p>
+          <p><a href='https://flask-restless.readthedocs.org/en/latest/index.html'><b>Flask Rest Extension</b></a></p>
+          <p><a href='https://www.mysql.com/'><b>MySQL</b></a></p>
+          <h3><b>Embedding Media:</b></h3>
+          <p><a href='https://developers.google.com/image-search/v1/jsondevguide?hl=en'><b>Google Image Search API</b></a></p>
+       </div>
+       <div class="center-content">
+         <h2><b>Tests</b></h2>
+           <a href="/aboutT" class="btn btn-primary btn-lg active" role="button">Run Tests</a>
+       </div>
     </div>
   </div>
 </body>
